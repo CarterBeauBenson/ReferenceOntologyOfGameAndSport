@@ -1,11 +1,142 @@
-@prefix : <http://www.semanticweb.org/carte/ontologies/2023/6/untitled-ontology-74#> .
+@prefix : <http://www.semanticweb.org/CarterBenson/ReferenceOntologyOfGameAndSport> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/carte/ontologies/2023/6/untitled-ontology-74> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://www.semanticweb.org/CarterBenson/ReferenceOntologyOfGameAndSport> .
 
-<http://www.semanticweb.org/carte/ontologies/2023/6/untitled-ontology-74> rdf:type owl:Ontology .
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyOfGameAndSport> rdf:type owl:Ontology ;
+                                                     dc:contributor "Alec Sculley"@en ,
+                                                                    "Austin Liebers"@en ,
+                                                                    "Carter Benson"@en ,
+                                                                    "John Beverley"@en ,
+                                                                    "Katie Johnson"@en ;
+                                                     rdfs:comment "This ontology is a provisional copy of ROoGaS, the Ontology of Football"@en ;
+                                                     rdfs:label "FutOn"@en .
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
+                rdfs:label "defintion"@en .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+dc:identifier rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+dc:license rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionPermission
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActionPermission> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation> ;
+                                                                          obo:IAO_0000115 "An Action Regulation that permits some Act."@en ;
+                                                                          rdfs:label "Action Permission"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionProhibition
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActionProhibition> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation> ;
+                                                                           obo:IAO_0000115 "An Action Regulation that prohibits some Act."@en ;
+                                                                           rdfs:label "Action Prohibition"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity> ;
+                                                                          obo:IAO_0000115 "A Directive Information Content Entity that prescribes an Act as required, prohibited, or permitted, and is the output of an Act which realizes some Authority Role."@en ,
+                                                                                          "Action Regulation"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionRequirement
+<http://www.ontologyrepository.com/CommonCoreOntologies/ActionRequirement> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation> ;
+                                                                           obo:IAO_0000115 "An Action Regulation that requires some Act."@en ;
+                                                                           rdfs:label "Action Requirement"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm
+<http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity> ;
+                                                                   obo:IAO_0000115 "A Directive Information Content Entity that prescribes the inputs and output of mathematical functions as well as workflow of execution for achieving a predefined objective"@en ;
+                                                                   rdfs:label "Algorithm" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity
+<http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity> rdf:type owl:Class ;
+                                                                                             obo:IAO_0000115 "An Information Content Entity that consists of a set of propositions that describe some Entity."@en ;
+                                                                                             rdfs:label "Descriptive Information Content Entity"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity
+<http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity> rdf:type owl:Class ;
+                                                                                           obo:IAO_0000115 "An Information Content Entity that consists of a set of propositions or images (as in the case of a blueprint) that prescribe some Entity."@en ;
+                                                                                           rdfs:label "Directive Information Content Entity"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Ideology
+<http://www.ontologyrepository.com/CommonCoreOntologies/Ideology> rdf:type owl:Class ;
+                                                                  obo:IAO_0000115 "An Information Content Entity that consists of a collection of claims about how some part of the world is or should be and which is accepted as true by an Agent or Group of Agents such that it forms the basis of their beliefs, goals, expectations, and motivations."@en ;
+                                                                  rdfs:label "Ideology" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct
+<http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct> rdf:type owl:Class ;
+                                                                        obo:IAO_0000115 "An Act in which at least one Agent plays a causative role and which is prescribed by some Directive Information Content Entity held by at least one of the Agents."@en ;
+                                                                        rdfs:label "Planned Act" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity
+<http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity> ;
+                                                                                             obo:IAO_0000115 "A Descriptive Information Content Entity that describes the extent, dimensions, quantity, or quality of an Entity relative to some standard."@en ;
+                                                                                             rdfs:label "Measurement Information Content Entity" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/OccupationRole
+<http://www.ontologyrepository.com/CommonCoreOntologies/OccupationRole> rdf:type owl:Class ;
+                                                                        obo:IAO_0000115 "A Role that inheres in an Agent in virtue of the responsibilities that Agent is expected to fulfill within the context of some Act of Employment."@en ;
+                                                                        rdfs:label "Occupation Role"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PredictiveInformationContentEntity
+<http://www.ontologyrepository.com/CommonCoreOntologies/PredictiveInformationContentEntity> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity> ;
+                                                                                            obo:IAO_0000115 "A Descriptive Information Content Entity that describes an uncertain future event."@en ;
+                                                                                            rdfs:label "PredictiveInformationContentEntity" .
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
