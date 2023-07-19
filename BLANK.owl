@@ -1,4 +1,5 @@
 @prefix : <http://www.semanticweb.org/CarterBenson/ReferenceOntologyOfGameAndSport> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -138,5 +139,126 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                                             rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity> ;
                                                                                             obo:IAO_0000115 "A Descriptive Information Content Entity that describes an uncertain future event."@en ;
                                                                                             rdfs:label "PredictiveInformationContentEntity" .
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Person
+cco:Person rdf:type owl:Class ;
+           cco:alternative_label "Human"@en ;
+           cco:definition "An Animal that is a member of the species Homo sapiens."@en ;
+           cco:definition_source "https://en.wikipedia.org/w/index.php?title=Human&oldid=1063145185"^^xsd:anyURI ;
+           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+           rdfs:label "Person"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Organization
+cco:Organization rdf:type owl:Class ;
+                 rdfs:subClassOf cco:GroupOfAgents ;
+                 cco:definition "A Group of Agents which can be the bearer of roles, has members, and has a set of organization rules."@en ;
+                 cco:definition_source "http://purl.obolibrary.org/obo/OBI_0000245" ;
+                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                 rdfs:comment "Members of organizations are either Organizations themselves or individual Persons. Members can bear specific Organization Member Roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the Organization by the organization members."@en ;
+                 rdfs:label "Organization"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/GroupOfAgents
+cco:GroupOfAgents rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000027 ,
+                                  [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                           owl:onProperty obo:RO_0002351 ;
+                                                           owl:someValuesFrom cco:Agent
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty obo:RO_0002351 ;
+                                                           owl:allValuesFrom cco:Agent
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+                  cco:definition "An Object Aggregate that has only Agents as parts."@en ;
+                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                  rdfs:label "Group of Agents"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/GroupOfOrganizations
+cco:GroupOfOrganizations rdf:type owl:Class ;
+                         rdfs:subClassOf cco:GroupOfAgents ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty obo:BFO_0000051 ;
+                                           owl:someValuesFrom cco:Organization
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty obo:BFO_0000051 ;
+                                           owl:allValuesFrom cco:Organization
+                                         ] ;
+                         cco:definition "A Group of Agents that has only Organizations as parts."@en ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                         rdfs:label "Group of Organizations"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/GroupOfPersons
+cco:GroupOfPersons rdf:type owl:Class ;
+                   rdfs:subClassOf cco:GroupOfAgents ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty obo:BFO_0000051 ;
+                                     owl:someValuesFrom cco:Person
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty obo:BFO_0000051 ;
+                                     owl:allValuesFrom cco:Person
+                                   ] ;
+                   cco:definition "A Group of Agents that has only Persons as parts."@en ;
+                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                   rdfs:label "Group of Persons"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation
+cco:ActionRegulation rdf:type owl:Class ;
+                     rdfs:subClassOf cco:DirectiveInformationContentEntity ;
+                     cco:definition "A Directive Information Content Entity that prescribes an Act as required, prohibited, or permitted, and is the output of an Act which realizes some Authority Role."@en ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                     rdfs:label "Action Regulation"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionProhibition
+cco:ActionProhibition rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( cco:ActionRegulation
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty cco:prohibits ;
+                                                                   owl:someValuesFrom obo:BFO_0000015
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf cco:ActionRegulation ;
+                      cco:definition "An Action Regulation that prohibits some Act."@en ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                      rdfs:label "Action Prohibition"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionPermission
+cco:ActionPermission rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( cco:ActionRegulation
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty cco:permits ;
+                                                                  owl:someValuesFrom obo:BFO_0000015
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf cco:ActionRegulation ;
+                     cco:alternative_label "Authorization"@en ,
+                                           "License"@en ;
+                     cco:definition "An Action Regulation that permits some Act."@en ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                     rdfs:label "Action Permission"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionRequirement
+cco:ActionRequirement rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( cco:ActionRegulation
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty cco:requires ;
+                                                                   owl:someValuesFrom obo:BFO_0000015
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf cco:ActionRegulation ;
+                      cco:alternative_label "Duty"@en ,
+                                            "Obligation"@en ;
+                      cco:definition "An Action Regulation that requires some Act."@en ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                      rdfs:label "Action Requirement"@en .
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
