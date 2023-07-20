@@ -148,6 +148,14 @@ cco:designates rdf:type owl:ObjectProperty .
 cco:is_a_measurement_of rdf:type owl:ObjectProperty .
 
 
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_a_nominal_measurement_of
+cco:is_a_nominal_measurement_of rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_a_ordinal_measurement_of
+cco:is_a_ordinal_measurement_of rdf:type owl:ObjectProperty .
+
+
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/is_a_ratio_measurement_of
 cco:is_a_ratio_measurement_of rdf:type owl:ObjectProperty .
 
@@ -160,12 +168,24 @@ cco:is_about rdf:type owl:ObjectProperty .
 cco:is_affiliated_with rdf:type owl:ObjectProperty .
 
 
+###  http://www.ontologyrepository.com/CommonCoreOntologies/permits
+cco:permits rdf:type owl:ObjectProperty .
+
+
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/prescribes
 cco:prescribes rdf:type owl:ObjectProperty .
 
 
+###  http://www.ontologyrepository.com/CommonCoreOntologies/prohibits
+cco:prohibits rdf:type owl:ObjectProperty .
+
+
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/represents
 cco:represents rdf:type owl:ObjectProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/requires
+cco:requires rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -948,6 +968,66 @@ cco:Act rdf:type owl:Class ;
         rdfs:label "Act"@en .
 
 
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionPermission
+cco:ActionPermission rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( cco:ActionRegulation
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty cco:permits ;
+                                                                  owl:someValuesFrom obo:BFO_0000015
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                     rdfs:subClassOf cco:ActionRegulation ;
+                     cco:alternative_label "Authorization"@en ,
+                                           "License"@en ;
+                     cco:definition "An Action Regulation that permits some Act."@en ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                     rdfs:label "Action Permission"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionProhibition
+cco:ActionProhibition rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( cco:ActionRegulation
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty cco:prohibits ;
+                                                                   owl:someValuesFrom obo:BFO_0000015
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf cco:ActionRegulation ;
+                      cco:definition "An Action Regulation that prohibits some Act."@en ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                      rdfs:label "Action Prohibition"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation
+cco:ActionRegulation rdf:type owl:Class ;
+                     rdfs:subClassOf cco:DirectiveInformationContentEntity ;
+                     cco:definition "A Directive Information Content Entity that prescribes an Act as required, prohibited, or permitted, and is the output of an Act which realizes some Authority Role."@en ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                     rdfs:label "Action Regulation"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionRequirement
+cco:ActionRequirement rdf:type owl:Class ;
+                      owl:equivalentClass [ owl:intersectionOf ( cco:ActionRegulation
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty cco:requires ;
+                                                                   owl:someValuesFrom obo:BFO_0000015
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ] ;
+                      rdfs:subClassOf cco:ActionRegulation ;
+                      cco:alternative_label "Duty"@en ,
+                                            "Obligation"@en ;
+                      cco:definition "An Action Regulation that requires some Act."@en ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                      rdfs:label "Action Requirement"@en .
+
+
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Agent
 cco:Agent rdf:type owl:Class ;
           owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000040
@@ -1173,6 +1253,29 @@ cco:Nickname rdf:type owl:Class ;
              rdfs:label "Nickname"@en .
 
 
+###  http://www.ontologyrepository.com/CommonCoreOntologies/NominalMeasurementInformationContentEntity
+cco:NominalMeasurementInformationContentEntity rdf:type owl:Class ;
+                                               owl:equivalentClass [ owl:intersectionOf ( cco:MeasurementInformationContentEntity
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty cco:is_a_nominal_measurement_of ;
+                                                                                            owl:someValuesFrom obo:BFO_0000001
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ] ;
+                                               rdfs:subClassOf cco:MeasurementInformationContentEntity ;
+                                               owl:disjointWith cco:OrdinalMeasurementInformationContentEntity ,
+                                                                cco:RatioMeasurementInformationContentEntity ;
+                                               cco:definition "A Measurement Information Content Entity that consists of a symbol that classifies Entities according to some shared, possibly arbitrary, characteristic."@en ;
+                                               cco:example_of_usage "The sentence \"January 20, 1985 was a cold day in Chicago, IL\" is the carrier of a nominal measurement."@en ,
+                                                                    "a measurement that classifies automobiles as sedans, coupes, hatchbacks, or convertibles" ,
+                                                                    "a measurement that classifies military intelligence as strategic, operational, or tactical" ,
+                                                                    "a measurement that classifies rocks as igneous, sedimentary, or metamorphic" ;
+                                               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                               rdfs:comment "Four of the subtypes of measurements used here (Interval, Nominal, Ordinal, and Ratio) were originally defined by S.S. Stevens in the article \"On the Theory of Scales of Measurement\" in Science, Vol. 103 No. 2684 on June 7, 1946. For an introductory article with links to additional content including criticisms and alternate classifications of measurements see https://en.wikipedia.org/wiki/Level_of_measurement"@en ;
+                                               rdfs:label "Nominal Measurement Information Content Entity"@en .
+
+
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier
 cco:NonNameIdentifier rdf:type owl:Class ;
                       rdfs:subClassOf cco:DesignativeInformationContentEntity .
@@ -1193,6 +1296,27 @@ cco:OccupationRole rdf:type owl:Class ;
                    cco:definition "A Role that inheres in an Agent in virtue of the responsibilities that Agent is expected to fulfill within the context of some Act of Employment."@en ;
                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
                    rdfs:label "Occupation Role"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/OrdinalMeasurementInformationContentEntity
+cco:OrdinalMeasurementInformationContentEntity rdf:type owl:Class ;
+                                               owl:equivalentClass [ owl:intersectionOf ( cco:MeasurementInformationContentEntity
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty cco:is_a_ordinal_measurement_of ;
+                                                                                            owl:someValuesFrom obo:BFO_0000001
+                                                                                          ]
+                                                                                        ) ;
+                                                                     rdf:type owl:Class
+                                                                   ] ;
+                                               rdfs:subClassOf cco:MeasurementInformationContentEntity ;
+                                               owl:disjointWith cco:RatioMeasurementInformationContentEntity ;
+                                               cco:definition "A Measurement Information Content Entity that consists of a symbol that places an Entity into some rank order."@en ;
+                                               cco:example_of_usage "The sentence \"The coldest day in history in Chicago, IL. is January 20, 1985.\" is the carrier of an ordinal measurment."@en ,
+                                                                    "a measurement that places Geospatial Regions into a rank order of small, medium, large" ,
+                                                                    "a measurement that places military units onto a readiness rank order of red, yellow, green" ;
+                                               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                               rdfs:comment "Four of the subtypes of measurements used here (Interval, Nominal, Ordinal, and Ratio) were originally defined by S.S. Stevens in the article \"On the Theory of Scales of Measurement\" in Science, Vol. 103 No. 2684 on June 7, 1946. For an introductory article with links to additional content including criticisms and alternate classifications of measurements see https://en.wikipedia.org/wiki/Level_of_measurement"@en ;
+                                               rdfs:label "Ordinal Measurement Information Content Entity"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Organism
@@ -1342,6 +1466,74 @@ cco:RepresentationalInformationContentEntity rdf:type owl:Class ;
                                              rdfs:label "Representational Information Content Entity"@en .
 
 
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SequencePositionOrdinality
+cco:SequencePositionOrdinality rdf:type owl:Class ;
+                               rdfs:subClassOf cco:OrdinalMeasurementInformationContentEntity ;
+                               cco:definition "An Ordinal Measurement Information Content Entity that is about the position of some entity in some ordered sequence."@en ;
+                               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                               rdfs:label "Sequence Position Ordinality"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/AdvancedMetric
+<http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/AdvancedMetric> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/SportPerformanceMetric> ;
+                                                                          obo:IAO_0000115 "A Sport Performance Metric that encompasses complex or advanced measurements in a sport or game."@en ;
+                                                                          rdfs:label "Advanced Metric"@en ;
+                                                                          skos:example "On Base Plus Slugging Percentage"@en ,
+                                                                                       "Quarter Back Rating"@en ,
+                                                                                       "Wins Above Replacement"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/BasicMetric
+<http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/BasicMetric> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/SportPerformanceMetric> ;
+                                                                       obo:IAO_0000115 "A Sport Performance Metric that represents basic, fundamental measurements in a sport or game, often directly observable and straightforward to calculate."@en ;
+                                                                       rdfs:label "Basic Metric"@en ;
+                                                                       skos:example "Batting average"@en ,
+                                                                                    "Completion percentage"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/LeagueStanding
+<http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/LeagueStanding> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf cco:SequencePositionOrdinality ;
+                                                                          obo:IAO_0000115 "A Sequence Position Ordinality that represents the position of a sports team within the ordered sequence of a league table"@en ;
+                                                                          cco:alternative_label "League Table" ;
+                                                                          rdfs:label "League Standing" .
+
+
+###  http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/Per-ActMetric
+<http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/Per-ActMetric> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/BasicMetric> ;
+                                                                         obo:IAO_0000115 "A Basic Sport Performance Metric that captures performance statistics as percentages."@en ;
+                                                                         rdfs:label "Per-Act Measurement"@en ;
+                                                                         skos:example "Field goal percentage"@en ,
+                                                                                      "batting average"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/Per-IntervalMetric
+<http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/Per-IntervalMetric> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/BasicMetric> ;
+                                                                              obo:IAO_0000115 "A Basic Sport Performance Metric that captures performance statistics standardized over a defined interval or period within the game."@en ;
+                                                                              rdfs:label "Per-Interval Metric"@en ;
+                                                                              skos:example "Points per game"@en ,
+                                                                                           "Progressive Passes per 90 minutes"@en ,
+                                                                                           "Strikeouts per 9 innings"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/PlayerPosition
+<http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/PlayerPosition> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                          obo:IAO_0000115 "A Nominal Measurement Information Content Entity that classifies players according to their roles or responsibilities within the structure of a game or sport."@en ;
+                                                                          rdfs:label "Player Position"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/PointsBasedLeagueStanding
+<http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/PointsBasedLeagueStanding> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/LeagueStanding> ;
+                                                                                     rdfs:label "A LeagueStanding that is determined by the number of points accumulated by a sports team within a league competition"@en ,
+                                                                                                "Points Based League Standing"@en .
+
+
 ###  http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/SportActCountMetric
 <http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/SportActCountMetric> rdf:type owl:Class ;
                                                                                rdfs:subClassOf cco:CountMeasurementInformationContentEntity ;
@@ -1365,110 +1557,13 @@ cco:RepresentationalInformationContentEntity rdf:type owl:Class ;
                                                                                   obo:IAO_0000115 "A Proportional Ratio Measurement Information Content Entity that quantifies an aspect of performance in a sport or game. This performance can be that of an individual player, a team, or even equipment."@en ;
                                                                                   cco:example_of_usage "On Base Percentage\", \"Completion Percentage\", \"Efficiency\""@en ;
                                                                                   rdfs:label "Sport Performance Metric" .
-###  http://www.ontologyrepository.com/CommonCoreOntologies/NominalMeasurementInformationContentEntity
-cco:NominalMeasurementInformationContentEntity rdf:type owl:Class ;
-                                               owl:equivalentClass [ owl:intersectionOf ( cco:MeasurementInformationContentEntity
-                                                                                          [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty cco:is_a_nominal_measurement_of ;
-                                                                                            owl:someValuesFrom obo:BFO_0000001
-                                                                                          ]
-                                                                                        ) ;
-                                                                     rdf:type owl:Class
-                                                                   ] ;
-                                               rdfs:subClassOf cco:MeasurementInformationContentEntity ;
-                                               owl:disjointWith cco:OrdinalMeasurementInformationContentEntity ,
-                                                                cco:RatioMeasurementInformationContentEntity ;
-                                               cco:definition "A Measurement Information Content Entity that consists of a symbol that classifies Entities according to some shared, possibly arbitrary, characteristic."@en ;
-                                               cco:example_of_usage "The sentence \"January 20, 1985 was a cold day in Chicago, IL\" is the carrier of a nominal measurement."@en ,
-                                                                    "a measurement that classifies automobiles as sedans, coupes, hatchbacks, or convertibles" ,
-                                                                    "a measurement that classifies military intelligence as strategic, operational, or tactical" ,
-                                                                    "a measurement that classifies rocks as igneous, sedimentary, or metamorphic" ;
-                                               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
-                                               rdfs:comment "Four of the subtypes of measurements used here (Interval, Nominal, Ordinal, and Ratio) were originally defined by S.S. Stevens in the article \"On the Theory of Scales of Measurement\" in Science, Vol. 103 No. 2684 on June 7, 1946. For an introductory article with links to additional content including criticisms and alternate classifications of measurements see https://en.wikipedia.org/wiki/Level_of_measurement"@en ;
-                                               rdfs:label "Nominal Measurement Information Content Entity"@en .
-
-###  http://www.ontologyrepository.com/CommonCoreOntologies/OrdinalMeasurementInformationContentEntity
-cco:OrdinalMeasurementInformationContentEntity rdf:type owl:Class ;
-                                               owl:equivalentClass [ owl:intersectionOf ( cco:MeasurementInformationContentEntity
-                                                                                          [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty cco:is_a_ordinal_measurement_of ;
-                                                                                            owl:someValuesFrom obo:BFO_0000001
-                                                                                          ]
-                                                                                        ) ;
-                                                                     rdf:type owl:Class
-                                                                   ] ;
-                                               rdfs:subClassOf cco:MeasurementInformationContentEntity ;
-                                               owl:disjointWith cco:RatioMeasurementInformationContentEntity ;
-                                               cco:definition "A Measurement Information Content Entity that consists of a symbol that places an Entity into some rank order."@en ;
-                                               cco:example_of_usage "The sentence \"The coldest day in history in Chicago, IL. is January 20, 1985.\" is the carrier of an ordinal measurment."@en ,
-                                                                    "a measurement that places Geospatial Regions into a rank order of small, medium, large" ,
-                                                                    "a measurement that places military units onto a readiness rank order of red, yellow, green" ;
-                                               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
-                                               rdfs:comment "Four of the subtypes of measurements used here (Interval, Nominal, Ordinal, and Ratio) were originally defined by S.S. Stevens in the article \"On the Theory of Scales of Measurement\" in Science, Vol. 103 No. 2684 on June 7, 1946. For an introductory article with links to additional content including criticisms and alternate classifications of measurements see https://en.wikipedia.org/wiki/Level_of_measurement"@en ;
-                                               rdfs:label "Ordinal Measurement Information Content Entity"@en .
-
-###  http://www.ontologyrepository.com/CommonCoreOntologies/SequencePositionOrdinality
-cco:SequencePositionOrdinality rdf:type owl:Class ;
-                               rdfs:subClassOf cco:OrdinalMeasurementInformationContentEntity ;
-                               cco:definition "An Ordinal Measurement Information Content Entity that is about the position of some entity in some ordered sequence."@en ;
-                               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
-                               rdfs:label "Sequence Position Ordinality"@en .
-
-###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation
-cco:ActionRegulation rdf:type owl:Class ;
-                     rdfs:subClassOf cco:DirectiveInformationContentEntity ;
-                     cco:definition "A Directive Information Content Entity that prescribes an Act as required, prohibited, or permitted, and is the output of an Act which realizes some Authority Role."@en ;
-                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
-                     rdfs:label "Action Regulation"@en .
 
 
-###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionRequirement
-cco:ActionRequirement rdf:type owl:Class ;
-                      owl:equivalentClass [ owl:intersectionOf ( cco:ActionRegulation
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty cco:requires ;
-                                                                   owl:someValuesFrom obo:BFO_0000015
-                                                                 ]
-                                                               ) ;
-                                            rdf:type owl:Class
-                                          ] ;
-                      rdfs:subClassOf cco:ActionRegulation ;
-                      cco:alternative_label "Duty"@en ,
-                                            "Obligation"@en ;
-                      cco:definition "An Action Regulation that requires some Act."@en ;
-                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
-                      rdfs:label "Action Requirement"@en .
-
-###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionPermission
-cco:ActionPermission rdf:type owl:Class ;
-                     owl:equivalentClass [ owl:intersectionOf ( cco:ActionRegulation
-                                                                [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty cco:permits ;
-                                                                  owl:someValuesFrom obo:BFO_0000015
-                                                                ]
-                                                              ) ;
-                                           rdf:type owl:Class
-                                         ] ;
-                     rdfs:subClassOf cco:ActionRegulation ;
-                     cco:alternative_label "Authorization"@en ,
-                                           "License"@en ;
-                     cco:definition "An Action Regulation that permits some Act."@en ;
-                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
-                     rdfs:label "Action Permission"@en .
-
-cco:ActionProhibition rdf:type owl:Class ;
-                      owl:equivalentClass [ owl:intersectionOf ( cco:ActionRegulation
-                                                                 [ rdf:type owl:Restriction ;
-                                                                   owl:onProperty cco:prohibits ;
-                                                                   owl:someValuesFrom obo:BFO_0000015
-                                                                 ]
-                                                               ) ;
-                                            rdf:type owl:Class
-                                          ] ;
-                      rdfs:subClassOf cco:ActionRegulation ;
-                      cco:definition "An Action Regulation that prohibits some Act."@en ;
-                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
-                      rdfs:label "Action Prohibition"@en .
+###  http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/WinsBasedLeagueStanding
+<http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/WinsBasedLeagueStanding> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/FutOnFutOn_00155/LeagueStanding> ;
+                                                                                   rdfs:label "A LeagueStanding that is determined by the number of matches won by a sports team within a league competition."@en ,
+                                                                                              "Wins Based League Standing"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
