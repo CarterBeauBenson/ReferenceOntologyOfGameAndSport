@@ -1623,5 +1623,349 @@ obo:BFO_0000182 rdf:type owl:Class ;
    obo:IAO_0010000 <http://purl.obolibrary.org/obo/bfo/axiom/138-001>
  ] .
 
+###  http://www.ontologyrepository.com/CommonCoreOntologies/OccupationRole
+cco:OccupationRole rdf:type owl:Class ;
+                   rdfs:subClassOf obo:BFO_0000023 ;
+                   cco:definition "A Role that inheres in an Agent in virtue of the responsibilities that Agent is expected to fulfill within the context of some Act of Employment."@en ;
+                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                   rdfs:label "Occupation Role"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity
+cco:DescriptiveInformationContentEntity rdf:type owl:Class ;
+                                        rdfs:subClassOf cco:InformationContentEntity ;
+                                        owl:disjointWith cco:DesignativeInformationContentEntity ,
+                                                         cco:DirectiveInformationContentEntity ;
+                                        cco:alternative_label "Descriptive ICE"@en ;
+                                        cco:definition "An Information Content Entity that consists of a set of propositions that describe some Entity."@en ;
+                                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                        rdfs:label "Descriptive Information Content Entity"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Ideology
+cco:Ideology rdf:type owl:Class ;
+             rdfs:subClassOf cco:InformationContentEntity ;
+             cco:definition "An Information Content Entity that consists of a collection of claims about how some part of the world is or should be and which is accepted as true by an Agent or Group of Agents such that it forms the basis of their beliefs, goals, expectations, and motivations."@en ;
+             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+             rdfs:label "Ideology"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity
+cco:InformationContentEntity rdf:type owl:Class ;
+                             owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000031
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty cco:is_about ;
+                                                                          owl:someValuesFrom obo:BFO_0000001
+                                                                        ]
+                                                                      ) ;
+                                                   rdf:type owl:Class
+                                                 ] ;
+                             rdfs:subClassOf obo:BFO_0000031 ;
+                             cco:alternative_label "ICE"@en ;
+                             cco:definition "A Generically Dependent Continuant that generically depends on some Information Bearing Entity and stands in relation of aboutness to some Entity."@en ;
+                             cco:definition_source "http://purl.obolibrary.org/obo/IAO_0000030" ;
+                             cco:elucidation "Information Content Entity is here intended to be a class of Entities whose instances are the informational content of Information Bearing Entities. For example, three instances of information bearers -- such as a bar chart, color-coded map, and a written report -- each of which lists the GDP of Countries for the year 2010 are each different carriers of the same information content. It is this content that is generically dependent upon its carrier. This treatment of Informational Content Entity (cf. the Information Artifact Ontology) leads to a principle of subtyping based upon the relationship that ICE's have with the Entity they are about rather than characteristics such as format, language, measurement scale, or media. The latter are treated here as being Qualities of bearers."@en ;
+                             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                             rdfs:label "Information Content Entity"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PredictiveInformationContentEntity
+cco:PredictiveInformationContentEntity rdf:type owl:Class ;
+                                       rdfs:subClassOf cco:DescriptiveInformationContentEntity ;
+                                       cco:alternative_label "Prediction"@en ,
+                                                             "Prediction Information Content Entity"@en ;
+                                       cco:definition "A Descriptive Information Content Entity that describes an uncertain future event."@en ;
+                                       cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                       rdfs:comment "Since predictions are inherently about not-yet-existant things, the Modal Relation Ontology term 'describes' (i.e. mro:describes) should be used (instead of the standard cco:describes) to relate instances of Predictive Information Content Entity to the entities they are about."@en ;
+                                       rdfs:label "Predictive Information Content Entity"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity
+cco:DescriptiveInformationContentEntity rdf:type owl:Class ;
+                                        rdfs:subClassOf cco:InformationContentEntity ;
+                                        owl:disjointWith cco:DesignativeInformationContentEntity ,
+                                                         cco:DirectiveInformationContentEntity ;
+                                        cco:alternative_label "Descriptive ICE"@en ;
+                                        cco:definition "An Information Content Entity that consists of a set of propositions that describe some Entity."@en ;
+                                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                        rdfs:label "Descriptive Information Content Entity"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity
+cco:DirectiveInformationContentEntity rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( cco:InformationContentEntity
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty cco:prescribes ;
+                                                                                   owl:someValuesFrom obo:BFO_0000001
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:subClassOf cco:InformationContentEntity ;
+                                      cco:alternative_label "Directive ICE"@en ;
+                                      cco:definition "An Information Content Entity that consists of a set of propositions or images (as in the case of a blueprint) that prescribe some Entity."@en ;
+                                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                      rdfs:label "Directive Information Content Entity"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeName
+cco:DesignativeName rdf:type owl:Class ;
+                    rdfs:subClassOf cco:DesignativeInformationContentEntity ;
+                    owl:disjointWith cco:NonNameIdentifier ;
+                    cco:alternative_label "Name"@en ;
+                    cco:definition "A Designative Information Content Entity that consists of a string of characters that designates an entity within a specified cultural or social namespace and which is typically a word or phrase in a natural language that has an accepted cultural or social significance."@en ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                    rdfs:label "Designative Name"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeInformationContentEntity
+cco:DesignativeInformationContentEntity rdf:type owl:Class ;
+                                        owl:equivalentClass [ owl:intersectionOf ( cco:InformationContentEntity
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty cco:designates ;
+                                                                                     owl:someValuesFrom obo:BFO_0000001
+                                                                                   ]
+                                                                                 ) ;
+                                                              rdf:type owl:Class
+                                                            ] ;
+                                        rdfs:subClassOf cco:InformationContentEntity ;
+                                        owl:disjointWith cco:DirectiveInformationContentEntity ;
+                                        cco:alternative_label "Designative ICE"@en ;
+                                        cco:definition "An Information Content Entity that consists of a set of symbols that denote some Entity."@en ;
+                                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                        rdfs:label "Designative Information Content Entity"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Nickname
+cco:Nickname rdf:type owl:Class ;
+             rdfs:subClassOf cco:DesignativeName ;
+             cco:definition "A Designative Name that is a familiar or humorous substitute for an entity's Proper Name."@en ;
+             cco:example_of_usage "Ike, Chief, P-Fox" ;
+             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+             rdfs:label "Nickname"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ProbabilityMeasurementInformationContentEntity
+cco:ProbabilityMeasurementInformationContentEntity rdf:type owl:Class ;
+                                                   rdfs:subClassOf cco:MeasurementInformationContentEntity ;
+                                                   cco:alternative_label "Likelihood Measurement"@en ,
+                                                                         "Probability Measurement"@en ;
+                                                   cco:definition "A Measurement Information Content Entity that is a measurement of the likelihood that a Process or Process Aggregate occurs."@en ;
+                                                   cco:definition_source "https://en.wikipedia.org/w/index.php?title=Probability&oldid=1059657543"^^xsd:anyURI ;
+                                                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                                   rdfs:comment "Every probability measurement is made within a particular context given certain background assumptions."@en ;
+                                                   rdfs:label "Probability Measurement Information Content Entity"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ProportionalRatioMeasurementInformationContentEntity
+cco:ProportionalRatioMeasurementInformationContentEntity rdf:type owl:Class ;
+                                                         rdfs:subClassOf cco:RatioMeasurementInformationContentEntity ;
+                                                         cco:definition "A Ratio Measurement Information Content Entity that is a measurement of a portion of a whole (described by the numerator) compared against that whole (described by the denominator) where the whole is a nominally described set of like entities."@en ;
+                                                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                                         rdfs:comment "A percentage is one way to express a proportional measure where the decimal expression of the proportion is multiplied by 100, thus giving the proportional value with respect to a whole of 100. E.g., the ratio of pigs to cows on a farm is 44 to 79 (44:79 or 44/79). The proportion of pigs to total animals is 44 to 123 or 44/123. The percentage of pigs is the decimal equivalent of the proportion (0.36) multiplied by a 100 (36%). The percentage can be expressed as a proportion where the numerator value is transformed for a denominator of 100, i.e., 36 of a 100 animals are pigs (36/100)."@en ,
+                                                                      "We may want to add either a subclass for Percentage or a data property (has percentage value) that links the percentage expression for a proportion to the relevant IBE."@en ;
+                                                         rdfs:label "Proportional Ratio Measurement Information Content Entity"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RatioMeasurementInformationContentEntity
+cco:RatioMeasurementInformationContentEntity rdf:type owl:Class ;
+                                             owl:equivalentClass [ owl:intersectionOf ( cco:MeasurementInformationContentEntity
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty cco:is_a_ratio_measurement_of ;
+                                                                                          owl:someValuesFrom obo:BFO_0000001
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                             rdfs:subClassOf cco:MeasurementInformationContentEntity ;
+                                             cco:definition "A Measurement Information Content Entity that consists of a symbol that places a Quality of an Entity onto an interval scale having a true zero value."@en ;
+                                             cco:example_of_usage "The sentence \"The temperature reached 240.372 degrees Kelvin on January 20, 1985 in Chicago, IL.\" is the carrier of a ratio measurement as 0 degrees on the Kelvin scale does describe absolute zero."@en ,
+                                                                  "a measurement of the barometric pressure at 1,000 feet above sea level" ,
+                                                                  "a measurement of the measure of air temperature on the Kelvin scale" ,
+                                                                  "a measurement of the number of members in an Organization" ;
+                                             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                             rdfs:comment "Four of the subtypes of measurements used here (Interval, Nominal, Ordinal, and Ratio) were originally defined by S.S. Stevens in the article \"On the Theory of Scales of Measurement\" in Science, Vol. 103 No. 2684 on June 7, 1946. For an introductory article with links to additional content including criticisms and alternate classifications of measurements see https://en.wikipedia.org/wiki/Level_of_measurement"@en ;
+                                             rdfs:label "Ratio Measurement Information Content Entity"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CountMeasurementInformationContentEntity
+cco:CountMeasurementInformationContentEntity rdf:type owl:Class ;
+                                             rdfs:subClassOf cco:RatioMeasurementInformationContentEntity ;
+                                             cco:definition "A Ratio Measurement Information Content Entity that is a measurement of the number of members of some aggregate."@en ;
+                                             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                             rdfs:label "Count Measurement Information Content Entity"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity
+cco:MeasurementInformationContentEntity rdf:type owl:Class ;
+                                        owl:equivalentClass [ owl:intersectionOf ( cco:DescriptiveInformationContentEntity
+                                                                                   [ rdf:type owl:Restriction ;
+                                                                                     owl:onProperty cco:is_a_measurement_of ;
+                                                                                     owl:someValuesFrom obo:BFO_0000001
+                                                                                   ]
+                                                                                 ) ;
+                                                              rdf:type owl:Class
+                                                            ] ;
+                                        rdfs:subClassOf cco:DescriptiveInformationContentEntity ;
+                                        owl:disjointWith cco:RepresentationalInformationContentEntity ;
+                                        cco:alternative_label "Measurement ICE"@en ;
+                                        cco:definition "A Descriptive Information Content Entity that describes the extent, dimensions, quantity, or quality of an Entity relative to some standard."@en ;
+                                        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                        rdfs:label "Measurement Information Content Entity"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementUnit
+cco:MeasurementUnit rdf:type owl:Class ;
+                    rdfs:subClassOf cco:DescriptiveInformationContentEntity ;
+                    cco:definition "A Descriptive Information Content Entity that describes a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity."@en ;
+                    cco:definition_source "https://en.wikipedia.org/w/index.php?title=Unit_of_measurement&oldid=1061038125"^^xsd:anyURI ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                    rdfs:label "Measurement Unit"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Algorithm
+cco:Algorithm rdf:type owl:Class ;
+              rdfs:subClassOf cco:DirectiveInformationContentEntity ;
+              cco:definition "A Directive Information Content Entity that prescribes the inputs and output of mathematical functions as well as workflow of execution for achieving a predefined objective."@en ;
+              cco:definition_source "http://purl.obolibrary.org/obo/IAO_0000064"^^xsd:anyURI ;
+              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+              rdfs:label "Algorithm"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ProperName
+cco:ProperName rdf:type owl:Class ;
+               rdfs:subClassOf cco:DesignativeName ;
+               cco:definition "A Designative Name that is an official name for a particular entity."@en ;
+               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+               rdfs:label "Proper Name"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PlanSpecification
+cco:PlanSpecification rdf:type owl:Class ;
+                      rdfs:subClassOf cco:DirectiveInformationContentEntity ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty obo:BFO_0000051 ;
+                                        owl:someValuesFrom cco:Objective
+                                      ] ;
+                      cco:definition "A Directive Information Content Entity that prescribes some set of intended Intentional Acts through which some Agent expects to achieve some Objective."@en ;
+                      cco:definition_source "https://en.wikipedia.org/w/index.php?title=Plan&oldid=1047320560"^^xsd:anyURI ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                      rdfs:label "Plan"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalInformationContentEntity
+cco:RepresentationalInformationContentEntity rdf:type owl:Class ;
+                                             owl:equivalentClass [ owl:intersectionOf ( cco:InformationContentEntity
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty cco:represents ;
+                                                                                          owl:someValuesFrom obo:BFO_0000001
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                             rdfs:subClassOf cco:InformationContentEntity ;
+                                             cco:definition "An Information Content Entity that represents some Entity."@en ;
+                                             cco:example_of_usage "the content of a court transcript represents a courtroom proceeding" ,
+                                                                  "the content of a photograph of the Statue of Liberty represents the Statue of Liberty" ,
+                                                                  "the content of a video of a sporting event represents that sporting event" ;
+                                             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                                             rdfs:label "Representational Information Content Entity"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationBearingEntity
+cco:InformationBearingEntity rdf:type owl:Class ;
+                             owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000030
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty obo:RO_0010002 ;
+                                                                          owl:someValuesFrom cco:InformationContentEntity
+                                                                        ]
+                                                                      ) ;
+                                                   rdf:type owl:Class
+                                                 ] ;
+                             rdfs:subClassOf obo:BFO_0000030 ;
+                             cco:alternative_label "IBE"@en ;
+                             cco:definition "An Object upon which an Information Content Entity generically depends."@en ;
+                             cco:definition_source "http://purl.obolibrary.org/obo/IAO_0000178"^^xsd:anyURI ;
+                             cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
+                             rdfs:label "Information Bearing Entity"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Animal
+cco:Animal rdf:type owl:Class ;
+           rdfs:subClassOf cco:Organism ;
+           cco:definition "An Organism that is multicellular, eukaryotic, heterotrophic, and capable of motility for part of its life."@en ;
+           cco:definition_source "https://en.wikipedia.org/w/index.php?title=Animal&oldid=1063873549"^^xsd:anyURI ;
+           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+           rdfs:label "Animal"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Person
+cco:Person rdf:type owl:Class ;
+           rdfs:subClassOf cco:Animal ;
+           cco:alternative_label "Human"@en ;
+           cco:definition "An Animal that is a member of the species Homo sapiens."@en ;
+           cco:definition_source "https://en.wikipedia.org/w/index.php?title=Human&oldid=1063145185"^^xsd:anyURI ;
+           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+           rdfs:label "Person"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Organization
+cco:Organization rdf:type owl:Class ;
+                 rdfs:subClassOf cco:GroupOfAgents ;
+                 cco:definition "A Group of Agents which can be the bearer of roles, has members, and has a set of organization rules."@en ;
+                 cco:definition_source "http://purl.obolibrary.org/obo/OBI_0000245" ;
+                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                 rdfs:comment "Members of organizations are either Organizations themselves or individual Persons. Members can bear specific Organization Member Roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the Organization by the organization members."@en ;
+                 rdfs:label "Organization"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/GroupOfOrganizations
+cco:GroupOfOrganizations rdf:type owl:Class ;
+                         rdfs:subClassOf cco:GroupOfAgents ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty obo:BFO_0000051 ;
+                                           owl:someValuesFrom cco:Organization
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty obo:BFO_0000051 ;
+                                           owl:allValuesFrom cco:Organization
+                                         ] ;
+                         cco:definition "A Group of Agents that has only Organizations as parts."@en ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                         rdfs:label "Group of Organizations"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/GroupOfPersons
+cco:GroupOfPersons rdf:type owl:Class ;
+                   rdfs:subClassOf cco:GroupOfAgents ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty obo:BFO_0000051 ;
+                                     owl:someValuesFrom cco:Person
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty obo:BFO_0000051 ;
+                                     owl:allValuesFrom cco:Person
+                                   ] ;
+                   cco:definition "A Group of Agents that has only Persons as parts."@en ;
+                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                   rdfs:label "Group of Persons"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Act
+cco:Act rdf:type owl:Class ;
+        rdfs:subClassOf obo:BFO_0000015 ;
+        cco:definition "A Process in which at least one Agent plays a causative role."@en ;
+        cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/EventOntology"^^xsd:anyURI ;
+        rdfs:label "Act"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/IntentionalAct
+cco:IntentionalAct rdf:type owl:Class ;
+                   rdfs:subClassOf cco:Act ;
+                   cco:alternative_label "Intentional Act"@en ;
+                   cco:definition "An Act in which at least one Agent plays a causative role and which is prescribed by some Directive Information Content Entity held by at least one of the Agents."@en ;
+                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/EventOntology"^^xsd:anyURI ;
+                   rdfs:label "Planned Act"@en .
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/OrganizationMember
+cco:OrganizationMember rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( cco:Person
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty obo:RO_0000087 ;
+                                                                    owl:someValuesFrom cco:OrganizationMemberRole
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                       rdfs:subClassOf cco:Person ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty cco:is_affiliated_with ;
+                                         owl:someValuesFrom cco:Organization
+                                       ] ;
+                       cco:definition "A Person who is affiliated with some Organization by being a member of that Organization."@en ;
+                       cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                       rdfs:label "Organization Member"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/OrganizationMemberRole
+cco:OrganizationMemberRole rdf:type owl:Class ;
+                           rdfs:subClassOf obo:BFO_0000023 ;
+                           cco:definition "A Role that inheres in an Agent in virtue of the responsibilities that Agent is expected to fulfill as a member of some Organization."@en ;
+                           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/AgentOntology"^^xsd:anyURI ;
+                           rdfs:label "Organization Member Role"@en .
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
