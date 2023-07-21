@@ -11,13 +11,13 @@
 @base <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport> .
 
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport> rdf:type owl:Ontology ;
-                                                                           dc:contributor "Alec Sculley"@en ,
-                                                                                          "Austin Liebers"@en ,
-                                                                                          "Carter Benson"@en ,
-                                                                                          "John Beverley"@en ,
-                                                                                          "Katie Johnson"@en ;
-                                                                           rdfs:comment "This ontology is a provisional copy of ROoGaS"@en ;
-                                                                           rdfs:label "Reference Ontology for Game and Sport"@en .
+                                                                            dc:contributor "Alec Sculley"@en ,
+                                                                                           "Austin Liebers"@en ,
+                                                                                           "Carter Benson"@en ,
+                                                                                           "John Beverley"@en ,
+                                                                                           "Katie Johnson"@en ;
+                                                                            rdfs:comment "This ontology is a provisional copy of ROoGaS"@en ;
+                                                                            rdfs:label "Reference Ontology for Game and Sport"@en .
 
 #################################################################
 #    Annotation properties
@@ -131,15 +131,15 @@ obo:RO_0040042 rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/contributor
-<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+dc:contributor rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/member
-<http://purl.org/dc/elements/1.1/member> rdf:type owl:AnnotationProperty .
+dc:member rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/source
-<http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
+dc:source rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/bibliographicCitation
@@ -385,11 +385,15 @@ rdfs:seeAlso rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#editorialNote
-<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty .
+skos:editorialNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
-<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+skos:prefLabel rdf:type owl:AnnotationProperty .
 
 
 ###  http://xmlns.com/foaf/0.1/homepage
@@ -1756,186 +1760,196 @@ cco:SequencePositionOrdinality rdf:type owl:Class ;
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AdvancedMetric
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AdvancedMetric> rdf:type owl:Class ;
-                                                                          rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportPerformanceMetric> ;
-                                                                          obo:IAO_0000115 "A Sport Performance Metric that encompasses complex or advanced measurements in a sport or game."@en ;
-                                                                          rdfs:label "Advanced Metric"@en ;
-                                                                          skos:example "On Base Plus Slugging Percentage"@en ,
-                                                                                       "Quarter Back Rating"@en ,
-                                                                                       "Wins Above Replacement"@en .
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportPerformanceMetric> ;
+                                                                                          obo:IAO_0000115 "A Sport Performance Metric that encompasses complex or advanced measurements in a sport or game."@en ;
+                                                                                          rdfs:label "Advanced Metric"@en ;
+                                                                                          skos:example "On Base Plus Slugging Percentage"@en ,
+                                                                                                       "Quarter Back Rating"@en ,
+                                                                                                       "Wins Above Replacement"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AssistantCoachRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AssistantCoachRole> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole> ;
+                                                                                              cco:definition "An coach role that inheres in an Agent who supports the head coach in training and instructing players in a sport or game."@en ;
+                                                                                              rdfs:label "Assistant Coach Role"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AthleticTrainerRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AthleticTrainerRole> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf cco:OccupationRole ;
+                                                                                               cco:definition "An occupational role that inheres in an Agent who is responsible for maintaining and improving the physical health and performance of athletes."@en ;
+                                                                                               rdfs:label "Athletic Trainer Role"@en .
 
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/BasicMetric
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/BasicMetric> rdf:type owl:Class ;
-                                                                       rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportPerformanceMetric> ;
-                                                                       obo:IAO_0000115 "A Sport Performance Metric that represents basic, fundamental measurements in a sport or game, often directly observable and straightforward to calculate."@en ;
-                                                                       rdfs:label "Basic Metric"@en ;
-                                                                       skos:example "Batting average"@en ,
-                                                                                    "Completion percentage"@en .
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportPerformanceMetric> ;
+                                                                                       obo:IAO_0000115 "A Sport Performance Metric that represents basic, fundamental measurements in a sport or game, often directly observable and straightforward to calculate."@en ;
+                                                                                       rdfs:label "Basic Metric"@en ;
+                                                                                       skos:example "Batting average"@en ,
+                                                                                                    "Completion percentage"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachAct
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachAct> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf cco:IntentionalAct ;
+                                                                                    cco:definition "An Intentional Act performed by a Coach in the context of a game or sport, often related to strategizing, decision making, or instruction."@en ;
+                                                                                    cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                    rdfs:label "Coach Act"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf cco:OccupationRole ;
+                                                                                     cco:definition "A and occupational role that inheres in an Agent who is responsible for training and instructing players in a sport or game."@en ;
+                                                                                     rdfs:label "Coach Role"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GeneralManagerRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GeneralManagerRole> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportsManagementRole> ;
+                                                                                              cco:alternative_label "Football Director"@en ;
+                                                                                              cco:definition "A sports management role that inheres in an Agent who is responsible for the overall operations and performance of a sports team."@en ;
+                                                                                              cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                              rdfs:label "General Manager Role"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/HeadCoachRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/HeadCoachRole> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole> ;
+                                                                                         cco:definition "A coach role that inheres in an Agent who is the principal coach and bears the main responsibility for strategy and team performance in a sport or game."@en ;
+                                                                                         rdfs:label "Head Coach Role"@en .
 
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/LeagueStanding
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/LeagueStanding> rdf:type owl:Class ;
-                                                                          rdfs:subClassOf cco:SequencePositionOrdinality ;
-                                                                          obo:IAO_0000115 "A Sequence Position Ordinality that represents the position of a sports team within the ordered sequence of a league table"@en ;
-                                                                          cco:alternative_label "League Table" ;
-                                                                          rdfs:label "League Standing" .
+                                                                                          rdfs:subClassOf cco:SequencePositionOrdinality ;
+                                                                                          obo:IAO_0000115 "A Sequence Position Ordinality that represents the position of a sports team within the ordered sequence of a league table"@en ;
+                                                                                          cco:alternative_label "League Table" ;
+                                                                                          rdfs:label "League Standing" .
 
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/Per-ActMetric
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/Per-ActMetric> rdf:type owl:Class ;
-                                                                         rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/BasicMetric> ;
-                                                                         obo:IAO_0000115 "A Basic Sport Performance Metric that captures performance statistics as percentages."@en ;
-                                                                         rdfs:label "Per-Act Measurement"@en ;
-                                                                         skos:example "Field goal percentage"@en ,
-                                                                                      "batting average"@en .
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/BasicMetric> ;
+                                                                                         obo:IAO_0000115 "A Basic Sport Performance Metric that captures performance statistics as percentages."@en ;
+                                                                                         rdfs:label "Per-Act Measurement"@en ;
+                                                                                         skos:example "Field goal percentage"@en ,
+                                                                                                      "batting average"@en .
 
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/Per-IntervalMetric
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/Per-IntervalMetric> rdf:type owl:Class ;
-                                                                              rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/BasicMetric> ;
-                                                                              obo:IAO_0000115 "A Basic Sport Performance Metric that captures performance statistics standardized over a defined interval or period within the game."@en ;
-                                                                              rdfs:label "Per-Interval Metric"@en ;
-                                                                              skos:example "Points per game"@en ,
-                                                                                           "Progressive Passes per 90 minutes"@en ,
-                                                                                           "Strikeouts per 9 innings"@en .
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/BasicMetric> ;
+                                                                                              obo:IAO_0000115 "A Basic Sport Performance Metric that captures performance statistics standardized over a defined interval or period within the game."@en ;
+                                                                                              rdfs:label "Per-Interval Metric"@en ;
+                                                                                              skos:example "Points per game"@en ,
+                                                                                                           "Progressive Passes per 90 minutes"@en ,
+                                                                                                           "Strikeouts per 9 innings"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerAct
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerAct> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf cco:IntentionalAct ;
+                                                                                     cco:definition "An Intentional Act performed by a Player in the context of a game or sport."@en ;
+                                                                                     cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                     rdfs:label "Player Act"@en .
 
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerPosition
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerPosition> rdf:type owl:Class ;
-                                                                          rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
-                                                                          obo:IAO_0000115 "A Nominal Measurement Information Content Entity that classifies players according to their roles or responsibilities within the structure of a game or sport."@en ;
-                                                                          rdfs:label "Player Position"@en .
+                                                                                          rdfs:subClassOf obo:BFO_0000023 ,
+                                                                                                          cco:NominalMeasurementInformationContentEntity ;
+                                                                                          obo:IAO_0000115 "A Nominal Measurement Information Content Entity that classifies players according to their roles or responsibilities within the structure of a game or sport."@en ;
+                                                                                          cco:definition "A Role that specifies a particular position or function that a player holds within a team during a game or sport event."@en ;
+                                                                                          cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                          rdfs:label "Player Position"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerRole> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf cco:OccupationRole ;
+                                                                                      cco:definition "An occupational role that inheres in an Agent who participates in a sport or game in a competitive context."@en ;
+                                                                                      rdfs:label "Player Role"@en .
 
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PointsBasedLeagueStanding
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PointsBasedLeagueStanding> rdf:type owl:Class ;
-                                                                                     rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/LeagueStanding> ;
-                                                                                     rdfs:label "A LeagueStanding that is determined by the number of points accumulated by a sports team within a league competition"@en ,
-                                                                                                "Points Based League Standing"@en .
+                                                                                                     rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/LeagueStanding> ;
+                                                                                                     rdfs:label "A LeagueStanding that is determined by the number of points accumulated by a sports team within a league competition"@en ,
+                                                                                                                "Points Based League Standing"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/RefereeAct
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/RefereeAct> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf cco:IntentionalAct ;
+                                                                                      cco:definition "An Intentional Act performed by a Referee in the context of a game or sport, typically related to enforcing rules and maintaining order."@en ;
+                                                                                      cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                      rdfs:label "Referee Act"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/RefereeRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/RefereeRole> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf cco:OccupationRole ;
+                                                                                       cco:definition "A occupational role that inheres in an Agent who is entrusted with enforcing the rules and maintaining the integrity of a sport or game during a competition."@en ;
+                                                                                       rdfs:label "Referee Role"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/ScoutRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/ScoutRole> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportsManagementRole> ;
+                                                                                     cco:definition "A sports management role that inheres in an Agent who is responsible for the discovery and evaluation of player talent for a sports team."@en ;
+                                                                                     cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                     rdfs:label "Scout Role"@en .
+
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SpectatorAct
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SpectatorAct> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf cco:IntentionalAct ;
+                                                                                        cco:definition "An Intentional Act performed by a Spectator in the context of a game or sport, typically related to observation, cheer, or interaction."@en ;
+                                                                                        cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                        rdfs:label "Spectator Act"@en .
 
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportActCountMetric
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportActCountMetric> rdf:type owl:Class ;
-                                                                               rdfs:subClassOf cco:CountMeasurementInformationContentEntity ;
-                                                                               obo:IAO_0000115 "A Count Measurement Information Content Entity that enumerates the occurrences of a specific action or event in a sport or game."@en ;
-                                                                               cco:alternative_label "Counting Stat"@en ;
-                                                                               cco:example_of_usage "\"Pass Attempts\", \"Steals\","@en ;
-                                                                               rdfs:label "Sport Act Count Metric"@en .
+                                                                                               rdfs:subClassOf cco:CountMeasurementInformationContentEntity ;
+                                                                                               obo:IAO_0000115 "A Count Measurement Information Content Entity that enumerates the occurrences of a specific action or event in a sport or game."@en ;
+                                                                                               cco:alternative_label "Counting Stat"@en ;
+                                                                                               cco:example_of_usage "\"Pass Attempts\", \"Steals\","@en ;
+                                                                                               rdfs:label "Sport Act Count Metric"@en .
 
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportEventProbabilityMetric
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportEventProbabilityMetric> rdf:type owl:Class ;
-                                                                                       rdfs:subClassOf cco:ProbabilityMeasurementInformationContentEntity ;
-                                                                                       obo:IAO_0000115 "A Probability Measurement Information Content Entity that quantifies the likelihood of a specific event or outcome occurring in a sport or game context."@en ;
-                                                                                       cco:example_of_usage "\"expected goals\", \"win probablility\""@en ;
-                                                                                       rdfs:label "Sport Act Probability Metric"@en .
+                                                                                                       rdfs:subClassOf cco:ProbabilityMeasurementInformationContentEntity ;
+                                                                                                       obo:IAO_0000115 "A Probability Measurement Information Content Entity that quantifies the likelihood of a specific event or outcome occurring in a sport or game context."@en ;
+                                                                                                       cco:example_of_usage "\"expected goals\", \"win probablility\""@en ;
+                                                                                                       rdfs:label "Sport Act Probability Metric"@en .
 
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportPerformanceMetric
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportPerformanceMetric> rdf:type owl:Class ;
-                                                                                  rdfs:subClassOf cco:ProportionalRatioMeasurementInformationContentEntity ;
-                                                                                  obo:IAO_0000115 "A Proportional Ratio Measurement Information Content Entity that quantifies an aspect of performance in a sport or game. This performance can be that of an individual player, a team, or even equipment."@en ;
-                                                                                  cco:example_of_usage "On Base Percentage\", \"Completion Percentage\", \"Efficiency\""@en ;
-                                                                                  rdfs:label "Sport Performance Metric" .
+                                                                                                  rdfs:subClassOf cco:ProportionalRatioMeasurementInformationContentEntity ;
+                                                                                                  obo:IAO_0000115 "A Proportional Ratio Measurement Information Content Entity that quantifies an aspect of performance in a sport or game. This performance can be that of an individual player, a team, or even equipment."@en ;
+                                                                                                  cco:example_of_usage "On Base Percentage\", \"Completion Percentage\", \"Efficiency\""@en ;
+                                                                                                  rdfs:label "Sport Performance Metric" .
+
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportsManagementRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportsManagementRole> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf cco:OccupationRole ;
+                                                                                                cco:definition "An occupational role that inheres in an Agent who is responsible for overseeing, managing, and strategizing various aspects of a sports team or organization."@en ;
+                                                                                                cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                                rdfs:label "Sports Management Role"@en .
 
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/WinsBasedLeagueStanding
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/WinsBasedLeagueStanding> rdf:type owl:Class ;
-                                                                                   rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/LeagueStanding> ;
-                                                                                   rdfs:label "A LeagueStanding that is determined by the number of matches won by a sports team within a league competition."@en ,
-                                                                                              "Wins Based League Standing"@en .
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerRole
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerRole> rdf:type owl:Class ;
-    rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/OccupationRole> ;
-    cco:definition "An occupational role that inheres in an Agent who participates in a sport or game in a competitive context."@en ;
-    rdfs:label "Player Role"@en .
-
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole> rdf:type owl:Class ;
-    rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/OccupationRole> ;
-    cco:definition "A and occupational role that inheres in an Agent who is responsible for training and instructing players in a sport or game."@en ;
-    rdfs:label "Coach Role"@en .
-
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AthleticTrainerRole
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AthleticTrainerRole> rdf:type owl:Class ;
-    rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/OccupationRole> ;
-    cco:definition "An occupational role that inheres in an Agent who is responsible for maintaining and improving the physical health and performance of athletes."@en ;
-    rdfs:label "Athletic Trainer Role"@en .
-
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/RefereeRole
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/RefereeRole> rdf:type owl:Class ;
-    rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/OccupationRole> ;
-    cco:definition "A occupational role that inheres in an Agent who is entrusted with enforcing the rules and maintaining the integrity of a sport or game during a competition."@en ;
-    rdfs:label "Referee Role"@en .
-
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/HeadCoachRole
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/HeadCoachRole> rdf:type owl:Class ;
-    rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole> ;
-    cco:definition "A coach role that inheres in an Agent who is the principal coach and bears the main responsibility for strategy and team performance in a sport or game."@en ;
-    rdfs:label "Head Coach Role"@en .
-
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AssistantCoachRole
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AssistantCoachRole> rdf:type owl:Class ;
-                    rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole> ;
-                    cco:definition "An coach role that inheres in an Agent who supports the head coach in training and instructing players in a sport or game."@en ;
-                    rdfs:label "Assistant Coach Role"@en .
-
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportsManagementRole
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportsManagementRole> rdf:type owl:Class ;
-                   rdfs:subClassOf cco:OccupationRole ;
-                   cco:definition "An occupational role that inheres in an Agent who is responsible for overseeing, managing, and strategizing various aspects of a sports team or organization."@en ;
-                   cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
-                   rdfs:label "Sports Management Role"@en .
-
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GeneralManagerRole
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GeneralManagerRole> rdf:type owl:Class ;
-                   rdfs:subClassOf cco:SportsManagementRole ;
-                   cco:definition "A sports management role that inheres in an Agent who is responsible for the overall operations and performance of a sports team."@en ;
-                   cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
-                   rdfs:label "General Manager Role"@en ;
-                   cco:alternative_label "Football Director"@en .
-
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/ScoutRole
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/ScoutRole> rdf:type owl:Class ;
-                   rdfs:subClassOf cco:SportsManagementRole ;
-                   cco:definition "A sports management role that inheres in an Agent who is responsible for the discovery and evaluation of player talent for a sports team."@en ;
-                   cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
-                   rdfs:label "Scout Role"@en .
-
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerAct
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerAct> rdf:type owl:Class ;
-              rdfs:subClassOf cco:IntentionalAct ;
-              cco:definition "An Intentional Act performed by a Player in the context of a game or sport."@en ;
-              cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
-              rdfs:label "Player Act"@en .
-
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachAct
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachAct> rdf:type owl:Class ;
-             rdfs:subClassOf cco:IntentionalAct ;
-             cco:definition "An Intentional Act performed by a Coach in the context of a game or sport, often related to strategizing, decision making, or instruction."@en ;
-             cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
-             rdfs:label "Coach Act"@en .
-
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/RefereeAct
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/RefereeAct> rdf:type owl:Class ;
-               rdfs:subClassOf cco:IntentionalAct ;
-               cco:definition "An Intentional Act performed by a Referee in the context of a game or sport, typically related to enforcing rules and maintaining order."@en ;
-               cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
-               rdfs:label "Referee Act"@en .
-
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SpectatorAct
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SpectatorAct> rdf:type owl:Class ;
-                 rdfs:subClassOf cco:IntentionalAct ;
-                 cco:definition "An Intentional Act performed by a Spectator in the context of a game or sport, typically related to observation, cheer, or interaction."@en ;
-                 cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
-                 rdfs:label "Spectator Act"@en .
-
-###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerPosition
-<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerPosition> rdf:type owl:Class ;
-                   rdfs:subClassOf obo:BFO_0000023 ;
-                   cco:definition "A Role that specifies a particular position or function that a player holds within a team during a game or sport event."@en ;
-                   cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
-                   rdfs:label "Player Position"@en .
+                                                                                                   rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/LeagueStanding> ;
+                                                                                                   rdfs:label "A LeagueStanding that is determined by the number of matches won by a sports team within a league competition."@en ,
+                                                                                                              "Wins Based League Standing"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
