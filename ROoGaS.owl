@@ -24,100 +24,380 @@
 #################################################################
 
 ###  http://purl.obolibrary.org/obo/BFO_0000179
-obo:BFO_0000179 rdf:type owl:AnnotationProperty .
+obo:BFO_0000179 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "Relates an entity in the ontology to the name of the variable that is used to represent it in the code that generates the BFO OWL file from the lispy specification."@en ;
+                obo:IAO_0000232 "Really of interest to developers only"@en ;
+                rdfs:label "BFO OWL specification label"@en ;
+                rdfs:subPropertyOf rdfs:label .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000180
-obo:BFO_0000180 rdf:type owl:AnnotationProperty .
+obo:BFO_0000180 rdf:type owl:AnnotationProperty ;
+                obo:IAO_0000115 "Relates an entity in the ontology to the term that is used to represent it in the the CLIF specification of BFO2"@en ;
+                obo:IAO_0000119 "Person:Alan Ruttenberg" ;
+                obo:IAO_0000232 "Really of interest to developers only"@en ;
+                rdfs:label "BFO CLIF specification label"@en ;
+                rdfs:subPropertyOf rdfs:label .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000111
+obo:IAO_0000111 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "editor preferred term"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000112
-obo:IAO_0000112 rdf:type owl:AnnotationProperty .
+obo:IAO_0000112 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "example of usage"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000114
+obo:IAO_0000114 rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000115
 obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
-                rdfs:label "defintion"@en .
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "definition"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000116
-obo:IAO_0000116 rdf:type owl:AnnotationProperty .
+obo:IAO_0000116 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "editor note"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000117
+obo:IAO_0000117 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "term editor"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000118
-obo:IAO_0000118 rdf:type owl:AnnotationProperty .
+obo:IAO_0000118 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "alternative term"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000119
-obo:IAO_0000119 rdf:type owl:AnnotationProperty .
+obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "definition source"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000232
+obo:IAO_0000232 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "curator note"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000412
+obo:IAO_0000412 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "imported from"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000600
-obo:IAO_0000600 rdf:type owl:AnnotationProperty .
+obo:IAO_0000600 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "elucidation"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000601
-obo:IAO_0000601 rdf:type owl:AnnotationProperty .
+obo:IAO_0000601 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "has associated axiom(nl)"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000602
-obo:IAO_0000602 rdf:type owl:AnnotationProperty .
+obo:IAO_0000602 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "has associated axiom(fol)"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0010000
+obo:IAO_0010000 rdf:type owl:AnnotationProperty ;
+                rdfs:isDefinedBy obo:iao.owl ;
+                rdfs:label "has axiom label"@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0001900
+obo:RO_0001900 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0040042
+obo:RO_0040042 rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/contributor
-dc:contributor rdf:type owl:AnnotationProperty .
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/elements/1.1/identifier
-dc:identifier rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/elements/1.1/member
+<http://purl.org/dc/elements/1.1/member> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/elements/1.1/license
-dc:license rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasExactSynonym
+<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#inSubset
+<http://www.geneontology.org/formats/oboInOwl#inSubset> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SI_unit_label
+cco:SI_unit_label rdf:type owl:AnnotationProperty ;
+                  cco:definition "An Alternative Label that is officially accepted for use in the International System of Units (SI) as denoting a Measurement Unit."@en ;
+                  cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/UnitsOfMeasureOntology"^^xsd:anyURI ;
+                  rdfs:label "SI unit label"@en ;
+                  rdfs:subPropertyOf cco:alternative_label .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/SI_unit_symbol
+cco:SI_unit_symbol rdf:type owl:AnnotationProperty ;
+                   cco:definition "An Acronym that is officially accepted for use in the International System of Units (SI) as denoting a Measurement Unit."@en ;
+                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/UnitsOfMeasureOntology"^^xsd:anyURI ;
+                   rdfs:label "SI unit symbol"@en ;
+                   rdfs:subPropertyOf cco:acronym .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/acronym
+cco:acronym rdf:type owl:AnnotationProperty ;
+            cco:definition "An Alternative Label that consists of a shortened or abbreviated form of the rdfs:label and is used to denote the entity."@en ;
+            cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+            rdfs:label "acronym"@en ;
+            rdfs:subPropertyOf cco:alternative_label .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/alternative_label
-cco:alternative_label rdf:type owl:AnnotationProperty .
+cco:alternative_label rdf:type owl:AnnotationProperty ;
+                      cco:definition "A term or phrase that may be used in place of the stated rdfs:label to denote the entity in question."@en ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                      rdfs:label "alternative label"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/code_license
+cco:code_license rdf:type owl:AnnotationProperty ;
+                 cco:definition "The name and description of the license under which the .owl file is released."@en ;
+                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                 rdfs:label "code license"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/content_license
+cco:content_license rdf:type owl:AnnotationProperty ;
+                    cco:definition "The name and description of the license under which the ideas, concepts and other informational content expressed in the .owl file are released."@en ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                    rdfs:label "content license"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/copyright
+cco:copyright rdf:type owl:AnnotationProperty ;
+              cco:definition "An assertion of copyright"@en ;
+              cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+              rdfs:label "copyright"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/definition
-cco:definition rdf:type owl:AnnotationProperty .
+cco:definition rdf:type owl:AnnotationProperty ;
+               cco:definition "A natural language explication of the meaning of the term."@en ;
+               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+               rdfs:label "definition"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/definition_source
-cco:definition_source rdf:type owl:AnnotationProperty .
+cco:definition_source rdf:type owl:AnnotationProperty ;
+                      cco:definition "A citation of where all or some of the information used to create the term's Definition was acquired from."@en ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                      rdfs:label "definition source"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/designator_annotation
+cco:designator_annotation rdf:type owl:AnnotationProperty ;
+                          cco:definition "A name or other identifier that is used to designate an individual."@en ;
+                          cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                          rdfs:label "designator annotation"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/doctrinal_acronym
+cco:doctrinal_acronym rdf:type owl:AnnotationProperty ;
+                      cco:definition "An Acronym that is used by a Doctrinal Source to denote the entity."@en ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                      rdfs:label "doctrinal acronym"@en ;
+                      rdfs:subPropertyOf cco:acronym .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/doctrinal_definition
+cco:doctrinal_definition rdf:type owl:AnnotationProperty ;
+                         cco:definition "A Definition that is taken directly from a Doctrinal Source."@en ;
+                         cco:elucidation "There is only one definition for any given term in an ontology; however, a Doctrinal Definition may be provided in addition to the asserted Definition if the preservation of this information is important. When both a Definition and a Doctrinal Definition are provided for a term, the Definition takes precedence."@en ;
+                         cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                         rdfs:label "doctrinal definition"@en ;
+                         rdfs:subPropertyOf cco:definition .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/doctrinal_label
+cco:doctrinal_label rdf:type owl:AnnotationProperty ;
+                    cco:definition "An Alternative Label that consists of the preferred term or phrase used by a Doctrinal Source to denote the entity."@en ;
+                    cco:elucidation "When the cco:doctrinal_label is identical to the rdfs:label, the cco:doctrinal_label annotation is superfluous. As a subclass of 'alternative label', 'doctrinal label' is intended to be used to provide additional information about the entity when its preferred doctrinal designator is ambiguous or otherwise inappropriate for use as the rdfs:label."@en ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                    rdfs:label "doctrinal label"@en ;
+                    rdfs:subPropertyOf cco:alternative_label .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/doctrinal_source
+cco:doctrinal_source rdf:type owl:AnnotationProperty ;
+                     cco:definition "A Definition Source that consists of a formalized doctrine in which the term is authoritatively defined."@en ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                     rdfs:label "doctrinal source"@en ;
+                     rdfs:subPropertyOf cco:definition_source .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/elucidation
-cco:elucidation rdf:type owl:AnnotationProperty .
+cco:elucidation rdf:type owl:AnnotationProperty ;
+                cco:definition "A clarification or further explanation of a term beyond what is included in the Definition or which is used when the term is primitive such that no non-circular definition can be given for it."@en ;
+                cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                rdfs:label "elucidation"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/example_of_usage
-cco:example_of_usage rdf:type owl:AnnotationProperty .
+cco:example_of_usage rdf:type owl:AnnotationProperty ;
+                     cco:definition "A phrase, sentence or set of terms intended to convey the conventional usage of the term."@en ;
+                     cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                     rdfs:label "example of usage"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/has_token_unit
+cco:has_token_unit rdf:type owl:AnnotationProperty ;
+                   cco:definition "A relation between an information content entity and a widely used measurement unit of the token used to express it."@en ;
+                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                   rdfs:label "has token unit"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/http_query_string
+cco:http_query_string rdf:type owl:AnnotationProperty ;
+                      cco:definition "The text of an HTTP request that can be sent to a SPARQL Protocol service."@en ;
+                      cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                      rdfs:label "http query string"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/interval_measurement_annotation
+cco:interval_measurement_annotation rdf:type owl:AnnotationProperty ;
+                                    cco:definition "A interval measurement value of an instance of a quality, realizable or process profile "@en ;
+                                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                                    rdfs:label "interval measurement annotation"@en ;
+                                    rdfs:subPropertyOf cco:measurement_annotation .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology
-cco:is_curated_in_ontology rdf:type owl:AnnotationProperty .
+cco:is_curated_in_ontology rdf:type owl:AnnotationProperty ;
+                           cco:definition "An annotation property that links a class, property, or named individual to the URI of the ontology where it is located."@en ;
+                           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                           rdfs:label "is curated in ontology"@en .
 
 
-###  http://www.w3.org/2004/02/skos/core#altLabel
-skos:altLabel rdf:type owl:AnnotationProperty .
+###  http://www.ontologyrepository.com/CommonCoreOntologies/is_tokenized_by
+cco:is_tokenized_by rdf:type owl:AnnotationProperty ;
+                    cco:definition "A relation between an information content entity and a widely used token used to express it."@en ;
+                    cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                    rdfs:label "is tokenized by"@en .
 
 
-###  http://www.w3.org/2004/02/skos/core#definition
-skos:definition rdf:type owl:AnnotationProperty .
+###  http://www.ontologyrepository.com/CommonCoreOntologies/measurement_annotation
+cco:measurement_annotation rdf:type owl:AnnotationProperty ;
+                           cco:definition "A measurement value of an instance of a quality, reazlizable or process profile"@en ;
+                           cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                           rdfs:label "measurement annotation"@en .
 
 
-###  http://www.w3.org/2004/02/skos/core#example
-skos:example rdf:type owl:AnnotationProperty .
+###  http://www.ontologyrepository.com/CommonCoreOntologies/nominal_measurement_annotation
+cco:nominal_measurement_annotation rdf:type owl:AnnotationProperty ;
+                                   cco:definition "A nominal measurement value of an instance of a quality, realizable or process profile"@en ;
+                                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                                   rdfs:label "nominal measurement annotation"@en ;
+                                   rdfs:subPropertyOf cco:measurement_annotation .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ordinal_measurement_annotation
+cco:ordinal_measurement_annotation rdf:type owl:AnnotationProperty ;
+                                   cco:definition "An ordinal measurement value of an instance of a quality, realizable or process profile"@en ;
+                                   cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                                   rdfs:label "ordinal measurement annotation"@en ;
+                                   rdfs:subPropertyOf cco:measurement_annotation .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/query_text
+cco:query_text rdf:type owl:AnnotationProperty ;
+               cco:definition "The text of a query that is associated with a class"@en ;
+               cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+               rdfs:label "query text"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ratio_measurement_annotation
+cco:ratio_measurement_annotation rdf:type owl:AnnotationProperty ;
+                                 cco:definition "A ratio measurement value of an instance of a quality, realizable or process profile"@en ;
+                                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                                 rdfs:label "ratio measurement annotation"@en ;
+                                 rdfs:subPropertyOf cco:measurement_annotation .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/term_creator
+cco:term_creator rdf:type owl:AnnotationProperty ;
+                 cco:definition "The name of the Term Editor who added the term to the ontology."@en ;
+                 cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                 rdfs:label "term creator"@en ;
+                 rdfs:subPropertyOf cco:term_editor .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/term_editor
+cco:term_editor rdf:type owl:AnnotationProperty ;
+                cco:definition "The name of a person who contributed to the development or enhancement of the term."@en ;
+                cco:is_curated_in_ontology "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/ExtendedRelationOntology"^^xsd:anyURI ;
+                rdfs:label "term editor"@en .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+rdfs:isDefinedBy rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#seeAlso
+rdfs:seeAlso rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:AnnotationProperty .
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#scopeNote
-skos:scopeNote rdf:type owl:AnnotationProperty .
+###  http://xmlns.com/foaf/0.1/homepage
+<http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/mbox
+<http://xmlns.com/foaf/0.1/mbox> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
