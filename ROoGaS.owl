@@ -1588,8 +1588,74 @@ cco:SequencePositionOrdinality rdf:type owl:Class ;
     cco:definition "A Role that inheres in an Agent who is entrusted with enforcing the rules and maintaining the integrity of a sport or game during a competition."@en ;
     rdfs:label "Referee Role"@en .
 
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/HeadCoachRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/HeadCoachRole> rdf:type owl:Class ;
+    rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole> ;
+    cco:definition "A Role that inheres in an Agent who is the principal coach and bears the main responsibility for strategy and team performance in a sport or game."@en ;
+    rdfs:label "Head Coach Role"@en .
 
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AssistantCoachRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AssistantCoachRole> rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole> ;
+                    cco:definition "A Role that inheres in an Agent who supports the head coach in training and instructing players in a sport or game."@en ;
+                    rdfs:label "Assistant Coach Role"@en .
 
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportsManagementRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportsManagementRole> rdf:type owl:Class ;
+                   rdfs:subClassOf cco:OccupationRole ;
+                   cco:definition "A Role that inheres in an Agent who is responsible for overseeing, managing, and strategizing various aspects of a sports team or organization."@en ;
+                   cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                   rdfs:label "Sports Management Role"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GeneralManagerRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GeneralManagerRole> rdf:type owl:Class ;
+                   rdfs:subClassOf cco:SportsManagementRole ;
+                   cco:definition "A Role that inheres in an Agent who is responsible for the overall operations and performance of a sports team."@en ;
+                   cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                   rdfs:label "General Manager Role"@en ;
+                   cco:alternative_label "Football Director"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/ScoutRole
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/ScoutRole> rdf:type owl:Class ;
+                   rdfs:subClassOf cco:SportsManagementRole ;
+                   cco:definition "A Role that inheres in an Agent who is responsible for the discovery and evaluation of player talent for a sports team."@en ;
+                   cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                   rdfs:label "Scout Role"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerAct
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerAct> rdf:type owl:Class ;
+              rdfs:subClassOf cco:IntentionalAct ;
+              cco:definition "An Intentional Act performed by a Player in the context of a game or sport."@en ;
+              cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+              rdfs:label "Player Act"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachAct
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachAct> rdf:type owl:Class ;
+             rdfs:subClassOf cco:IntentionalAct ;
+             cco:definition "An Intentional Act performed by a Coach in the context of a game or sport, often related to strategizing, decision making, or instruction."@en ;
+             cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+             rdfs:label "Coach Act"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/RefereeAct
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/RefereeAct> rdf:type owl:Class ;
+               rdfs:subClassOf cco:IntentionalAct ;
+               cco:definition "An Intentional Act performed by a Referee in the context of a game or sport, typically related to enforcing rules and maintaining order."@en ;
+               cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+               rdfs:label "Referee Act"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SpectatorAct
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SpectatorAct> rdf:type owl:Class ;
+                 rdfs:subClassOf cco:IntentionalAct ;
+                 cco:definition "An Intentional Act performed by a Spectator in the context of a game or sport, typically related to observation, cheer, or interaction."@en ;
+                 cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                 rdfs:label "Spectator Act"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerPosition
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerPosition> rdf:type owl:Class ;
+                   rdfs:subClassOf obo:BFO_0000023 ;
+                   cco:definition "A Role that specifies a particular position or function that a player holds within a team during a game or sport event."@en ;
+                   cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                   rdfs:label "Player Position"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
