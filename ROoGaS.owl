@@ -2076,6 +2076,48 @@ cco:SequencePositionOrdinality rdf:type owl:Class ;
     rdfs:label "Match Point"@en ;
     cco:definition "A process boundary that, in sports like tennis, marks the point at which, if the serving player wins, the match is over."@en .
 
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerDesignation
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerDesignation> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                    cco:definition "A Nominal Measurement Information Content Entity that classifies players according to their specific roles within a game. Examples could be 'captain', 'substitute', 'starter', or 'reserve'."@en ;
+                                                                                    rdfs:label "Player Designation"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GameType
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GameType> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                    cco:definition "A Nominal Measurement Information Content Entity that classifies games according to their structure and rules. For example, 'single-player', 'multiplayer', 'co-op', 'competitive', etc."@en ;
+                                                                                    rdfs:label "Game Type"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportCategory
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportCategory> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                    cco:definition "A Nominal Measurement Information Content Entity that classifies sports into categories. Examples include 'team sport', 'individual sport', 'racket sport', 'contact sport', etc."@en ;
+                                                                                    rdfs:label "Sport Category"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GameOutcome
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GameOutcome> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                    cco:definition "A Nominal Measurement Information Content Entity that categorizes the outcome of a game. For instance, 'win', 'loss', 'draw', 'forfeit', etc."@en ;
+                                                                                    rdfs:label "Game Outcome"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerStatus
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerStatus> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                    cco:definition "A Nominal Measurement Information Content Entity that labels the current status of a player. Examples might be 'active', 'injured', 'suspended', 'retired', etc."@en ;
+                                                                                    rdfs:label "Player Status"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayType
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayType> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                    cco:definition "A Nominal Measurement Information Content Entity that categorizes a type of play or action in a game, such as 'offense', 'defense', 'special teams' in American football, or 'service', 'forehand', 'backhand' in tennis."@en ;
+                                                                                    rdfs:label "Play Type"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SeasonType
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SeasonType> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                    cco:definition "A Nominal Measurement Information Content Entity that classifies the periods of a sports league. For example, 'regular season', 'pre-season', 'playoffs', 'off-season', etc."@en ;
+                                                                                    rdfs:label "Season Type"@en .
+
 
 
 
