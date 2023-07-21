@@ -1951,5 +1951,83 @@ cco:SequencePositionOrdinality rdf:type owl:Class ;
                                                                                                    rdfs:label "A LeagueStanding that is determined by the number of matches won by a sports team within a league competition."@en ,
                                                                                                               "Wins Based League Standing"@en .
 
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/TeamPlayPhilosophy
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/TeamPlayPhilosophy> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf cco:Ideology ;
+                                                                                               cco:definition "An Ideology adopted by a Team or Group of Agents regarding how they should approach and conduct their participation in a game or sport."@en ;
+                                                                                               cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                               rdfs:label "Team Play Philosophy"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachingPhilosophy
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachingPhilosophy> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf cco:Ideology ;
+                                                                                               cco:definition "An Ideology adopted by a Coach that shapes their approach to guiding, training, and managing players in a game or sport."@en ;
+                                                                                               cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                               rdfs:label "Coaching Philosophy"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AthleticTrainingPhilosophy
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AthleticTrainingPhilosophy> rdf:type owl:Class ;
+                                                                                                       rdfs:subClassOf cco:Ideology ;
+                                                                                                       cco:definition "An Ideology adopted by an Athletic Trainer that influences their approach to preparing and maintaining the physical and mental fitness of athletes."@en ;
+                                                                                                       cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                                       rdfs:label "Athletic Training Philosophy"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GameStrategyIdeology
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GameStrategyIdeology> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf cco:Ideology ;
+                                                                                               cco:definition "An Ideology adopted by an Agent or Group of Agents which forms the basis of their beliefs, goals, expectations, and motivations in strategizing for a game or sport."@en ;
+                                                                                               cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                               rdfs:label "Game Strategy Ideology"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportEthics
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportEthics> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf cco:Ideology ;
+                                                                                       cco:definition "An Ideology that governs the beliefs and actions of Agents involved in sports, in relation to matters of right and wrong conduct."@en ;
+                                                                                       cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                       rdfs:label "Sport Ethics"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportOrganization
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportOrganization> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf cco:Organization ;
+                                                                                            cco:definition "An Organization that operates within the domain of sports, facilitating, managing, or participating in sporting events."@en ;
+                                                                                            cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                            rdfs:label "Sport Organization"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportGoverningBody
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportGoverningBody> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportOrganization> ;
+                                                                                               cco:definition "A Sport Organization that possesses regulatory or supervisory authority over a particular sport or sports in a specific geographic area or globally."@en ;
+                                                                                               cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                               rdfs:label "Sport Governing Body"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportTeam
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportTeam> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportOrganization> ;
+                                                                                    cco:definition "A Sport Organization comprised of players, coaches, and support staff that participates in sports competitions."@en ;
+                                                                                    cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                    rdfs:label "Sport Team"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportLeague
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportLeague> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportOrganization> ;
+                                                                                       cco:definition "A Sport Organization that governs competitions between teams and/or individual athletes within a particular sport."@en ;
+                                                                                       cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                       rdfs:label "Sport League"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/EsportsOrganization
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/EsportsOrganization> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportOrganization> ;
+                                                                                              cco:definition "A Sport Organization that facilitates, manages, or participates in competitive video gaming."@en ;
+                                                                                              cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                              rdfs:label "Esports Organization"@en .
+
+###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerAssociation
+<http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerAssociation> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportOrganization> ;
+                                                                                            cco:definition "A Sport Organization that represents the interests of athletes, typically in a collective bargaining context."@en ;
+                                                                                            cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
+                                                                                            rdfs:label "Player Association"@en .
+
+
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
