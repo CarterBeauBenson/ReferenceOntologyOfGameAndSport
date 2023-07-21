@@ -1847,50 +1847,50 @@ cco:SequencePositionOrdinality rdf:type owl:Class ;
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerRole
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PlayerRole> rdf:type owl:Class ;
     rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/OccupationRole> ;
-    cco:definition "A Role that inheres in an Agent who participates in a sport or game in a competitive context."@en ;
+    cco:definition "An occupational role that inheres in an Agent who participates in a sport or game in a competitive context."@en ;
     rdfs:label "Player Role"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole> rdf:type owl:Class ;
     rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/OccupationRole> ;
-    cco:definition "A Role that inheres in an Agent who is responsible for training and instructing players in a sport or game."@en ;
+    cco:definition "A and occupational role that inheres in an Agent who is responsible for training and instructing players in a sport or game."@en ;
     rdfs:label "Coach Role"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AthleticTrainerRole
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AthleticTrainerRole> rdf:type owl:Class ;
     rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/OccupationRole> ;
-    cco:definition "A Role that inheres in an Agent who is responsible for maintaining and improving the physical health and performance of athletes."@en ;
+    cco:definition "An occupational role that inheres in an Agent who is responsible for maintaining and improving the physical health and performance of athletes."@en ;
     rdfs:label "Athletic Trainer Role"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/RefereeRole
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/RefereeRole> rdf:type owl:Class ;
     rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/OccupationRole> ;
-    cco:definition "A Role that inheres in an Agent who is entrusted with enforcing the rules and maintaining the integrity of a sport or game during a competition."@en ;
+    cco:definition "A occupational role that inheres in an Agent who is entrusted with enforcing the rules and maintaining the integrity of a sport or game during a competition."@en ;
     rdfs:label "Referee Role"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/HeadCoachRole
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/HeadCoachRole> rdf:type owl:Class ;
     rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole> ;
-    cco:definition "A Role that inheres in an Agent who is the principal coach and bears the main responsibility for strategy and team performance in a sport or game."@en ;
+    cco:definition "A coach role that inheres in an Agent who is the principal coach and bears the main responsibility for strategy and team performance in a sport or game."@en ;
     rdfs:label "Head Coach Role"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AssistantCoachRole
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/AssistantCoachRole> rdf:type owl:Class ;
                     rdfs:subClassOf <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/CoachRole> ;
-                    cco:definition "A Role that inheres in an Agent who supports the head coach in training and instructing players in a sport or game."@en ;
+                    cco:definition "An coach role that inheres in an Agent who supports the head coach in training and instructing players in a sport or game."@en ;
                     rdfs:label "Assistant Coach Role"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportsManagementRole
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportsManagementRole> rdf:type owl:Class ;
                    rdfs:subClassOf cco:OccupationRole ;
-                   cco:definition "A Role that inheres in an Agent who is responsible for overseeing, managing, and strategizing various aspects of a sports team or organization."@en ;
+                   cco:definition "An occupational role that inheres in an Agent who is responsible for overseeing, managing, and strategizing various aspects of a sports team or organization."@en ;
                    cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
                    rdfs:label "Sports Management Role"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GeneralManagerRole
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GeneralManagerRole> rdf:type owl:Class ;
                    rdfs:subClassOf cco:SportsManagementRole ;
-                   cco:definition "A Role that inheres in an Agent who is responsible for the overall operations and performance of a sports team."@en ;
+                   cco:definition "A sports management role that inheres in an Agent who is responsible for the overall operations and performance of a sports team."@en ;
                    cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
                    rdfs:label "General Manager Role"@en ;
                    cco:alternative_label "Football Director"@en .
@@ -1898,7 +1898,7 @@ cco:SequencePositionOrdinality rdf:type owl:Class ;
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/ScoutRole
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/ScoutRole> rdf:type owl:Class ;
                    rdfs:subClassOf cco:SportsManagementRole ;
-                   cco:definition "A Role that inheres in an Agent who is responsible for the discovery and evaluation of player talent for a sports team."@en ;
+                   cco:definition "A sports management role that inheres in an Agent who is responsible for the discovery and evaluation of player talent for a sports team."@en ;
                    cco:is_curated_in_ontology "http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport"^^xsd:anyURI ;
                    rdfs:label "Scout Role"@en .
 
