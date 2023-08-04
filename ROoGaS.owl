@@ -2121,100 +2121,60 @@ cco:SequencePositionOrdinality rdf:type owl:Class ;
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GamePlan
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/GamePlan> rdf:type owl:Class ;
               rdfs:subClassOf cco:PlanSpecification ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty obo:BFO_0000051 ;
-                                owl:someValuesFrom game:Objective
-                              ] ;
               cco:definition "A Plan that outlines strategies and tactics a team or individual will use in a specific game or match to outperform opponents."@en ;
               rdfs:label "GamePlan"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/TrainingPlan
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/TrainingPlan> rdf:type owl:Class ;
                   rdfs:subClassOf cco:PlanSpecification ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty obo:BFO_0000051 ;
-                                    owl:someValuesFrom game:Objective
-                                  ] ;
                   cco:definition "A Plan that details an athlete's workout schedule, including the types of exercises, duration, and intensity, to enhance specific skills or physical conditions."@en ;
                   rdfs:label "TrainingPlan"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SeasonPlan
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SeasonPlan> rdf:type owl:Class ;
                 rdfs:subClassOf cco:PlanSpecification ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom game:Objective
-                                ] ;
                 cco:definition "A Plan that outlines a team's or an athlete's objectives, strategies, and tactics for an entire sports season, including the schedule of games or competitions, training regimen, and rest periods."@en ;
                 rdfs:label "SeasonPlan"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/InjuryRecoveryPlan
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/InjuryRecoveryPlan> rdf:type owl:Class ;
                 rdfs:subClassOf cco:PlanSpecification ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom game:Objective
-                                ] ;
                 cco:definition "A Plan that details the steps, therapies, and timelines for an athlete to recover from an injury and regain their performance level."@en ;
                 rdfs:label "InjuryRecoveryPlan"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/NutritionPlan
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/NutritionPlan> rdf:type owl:Class ;
                 rdfs:subClassOf cco:PlanSpecification ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom game:Objective
-                                ] ;
                 cco:definition "A Plan that outlines an athlete's dietary intake, including the types of food, meal timings, and portion sizes, to ensure optimal nutrition for performance and recovery."@en ;
                 rdfs:label "NutritionPlan"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportsEventPlan
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/SportsEventPlan> rdf:type owl:Class ;
                 rdfs:subClassOf cco:PlanSpecification ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom game:Objective
-                                ] ;
                 cco:definition "A Plan that outlines the logistics, resources, and timelines for hosting a sports event, including the schedule of games, facilities management, and safety measures."@en ;
                 rdfs:label "SportsEventPlan"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/YouthDevelopmentPlan
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/YouthDevelopmentPlan> rdf:type owl:Class ;
                 rdfs:subClassOf cco:PlanSpecification ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom game:Objective
-                                ] ;
                 cco:definition "A Plan that outlines the training, competition, and growth strategies for young athletes to develop their skills and transition to higher levels of sport."@en ;
                 rdfs:label "YouthDevelopmentPlan"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/TacticalPlan
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/TacticalPlan> rdf:type owl:Class ;
                 rdfs:subClassOf cco:PlanSpecification ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom game:Objective
-                                ] ;
                 cco:definition "A Plan that outlines the specific tactics a team or an athlete will use in different situations during a game or competition to achieve an advantage."@en ;
                 rdfs:label "TacticalPlan"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/MentalTrainingPlan
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/MentalTrainingPlan> rdf:type owl:Class ;
                 rdfs:subClassOf cco:PlanSpecification ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom game:Objective
-                                ] ;
                 cco:definition "A Plan that details the techniques and practices an athlete will use to improve mental toughness, focus, and resilience in sports performance."@en ;
                 rdfs:label "MentalTrainingPlan"@en .
 
 ###  http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PerformanceEnhancementPlan
 <http://www.semanticweb.org/CarterBenson/ReferenceOntologyForGameAndSport/PerformanceEnhancementPlan> rdf:type owl:Class ;
                 rdfs:subClassOf cco:PlanSpecification ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty obo:BFO_0000051 ;
-                                  owl:someValuesFrom game:Objective
-                                ] ;
                 cco:definition "A Plan that outlines the training, nutrition, recovery, and mental strategies an athlete will employ to improve their overall sports performance."@en ;
                 rdfs:label "PerformanceEnhancementPlan"@en .
 
