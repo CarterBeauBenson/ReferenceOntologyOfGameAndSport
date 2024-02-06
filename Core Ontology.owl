@@ -9,4 +9,459 @@
 <http://www.gameandsportsontologyfoundry.org/gameandsportscore> rdf:type owl:Ontology ;
                                                                  owl:imports <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2023-04-07/MergedAllCoreOntology> .
 
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscoreGamePlan
+:GamePlan rdf:type owl:Class ;
+          rdfs:subClassOf cco:PlanSpecification ;
+          :definition "A Plan that outlines strategies and tactics a team or individual will use in a specific game or match to outperform opponents."@en ;
+          rdfs:label "Game Plan"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscoreInjuryRecoveryPlan
+:InjuryRecoveryPlan rdf:type owl:Class ;
+                    rdfs:subClassOf :TrainingPlan ;
+                    :definition "A training plan that details the steps, therapies, and timelines for an athlete to recover from an injury and regain their performance level."@en ;
+                    rdfs:label "Injury Recovery Plan"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscoreMentalTrainingPlan
+:MentalTrainingPlan rdf:type owl:Class ;
+                    rdfs:subClassOf :TrainingPlan ;
+                    :definition "A training plan that details the techniques and practices an athlete will use to improve mental toughness, focus, and resilience in sports performance."@en ;
+                    rdfs:label "Mental Training Plan"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscoreNutritionPlan
+:NutritionPlan rdf:type owl:Class ;
+               rdfs:subClassOf cco:PlanSpecification ;
+               :definition "A Plan that outlines an athlete's dietary intake, including the types of food, meal timings, and portion sizes, to ensure optimal nutrition for performance and recovery."@en ;
+               rdfs:label "Nutrition Plan"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscorePerformanceEnhancementPlan
+:PerformanceEnhancementPlan rdf:type owl:Class ;
+                            rdfs:subClassOf :TrainingPlan ;
+                            :definition "A training plan that outlines the training, nutrition, recovery, and mental strategies an athlete will employ to improve their overall sports performance."@en ;
+                            rdfs:label "Performance Enhancement Plan"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscoreSeasonPlan
+:SeasonPlan rdf:type owl:Class ;
+            rdfs:subClassOf cco:PlanSpecification ;
+            :definition "A Plan that outlines a team's or an athlete's objectives, strategies, and tactics for an entire sports season, including the schedule of games or competitions, training regimen, and rest periods."@en ;
+            rdfs:label "Season Plan"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscoreSportsEventPlan
+:SportsEventPlan rdf:type owl:Class ;
+                 rdfs:subClassOf cco:PlanSpecification ;
+                 :definition "A Plan that outlines the logistics, resources, and timelines for hosting a sports event, including the schedule of games, facilities management, and safety measures."@en ;
+                 rdfs:label "Sports Event Plan"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscoreTacticalPlan
+:TacticalPlan rdf:type owl:Class ;
+              rdfs:subClassOf cco:PlanSpecification ;
+              :definition "A Plan that outlines the specific tactics a team or an athlete will use in different situations during a game or competition to achieve an advantage."@en ;
+              rdfs:label "Tactical Plan"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscoreTrainingPlan
+:TrainingPlan rdf:type owl:Class ;
+              rdfs:subClassOf cco:PlanSpecification ;
+              :definition "A Plan that details an athlete's workout schedule, including the types of exercises, duration, and intensity, to enhance specific skills or physical conditions."@en ;
+              rdfs:label "Training Plan"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscoreYouthDevelopmentPlan
+:YouthDevelopmentPlan rdf:type owl:Class ;
+                      rdfs:subClassOf :TrainingPlan ;
+                      :definition "A training plan that outlines the training, competition, and growth strategies for young athletes to develop their skills and transition to higher levels of sport."@en ;
+                      rdfs:label "Youth Development Plan"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/AdvancedMetric
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/AdvancedMetric> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportPerformanceMetric> ;
+                                                                                          obo:IAO_0000115 "A Sport Performance Metric that encompasses complex or advanced measurements in a sport or game."@en ;
+                                                                                          rdfs:label "Advanced Metric"@en ;
+                                                                                          skos:example "On Base Plus Slugging Percentage"@en ,
+                                                                                                       "Quarter Back Rating"@en ,
+                                                                                                       "Wins Above Replacement"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/AssistantCoachRole
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/AssistantCoachRole> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/CoachRole> ;
+                                                                                              cco:definition "An coach role that inheres in an Agent who supports the head coach in training and instructing players in a sport or game."@en ;
+                                                                                              rdfs:label "Assistant Coach Role"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/AthleticTrainerRole
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/AthleticTrainerRole> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf cco:OccupationRole ;
+                                                                                               cco:definition "An occupational role that inheres in an Agent who is responsible for maintaining and improving the physical health and performance of athletes."@en ;
+                                                                                               rdfs:label "Athletic Trainer Role"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/AthleticTrainingPhilosophy
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/AthleticTrainingPhilosophy> rdf:type owl:Class ;
+                                                                                                      rdfs:subClassOf cco:Ideology ;
+                                                                                                      cco:definition "An Ideology adopted by an Athletic Trainer that influences their approach to preparing and maintaining the physical and mental fitness of athletes."@en ;
+                                                                                                      cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                                      rdfs:label "Athletic Training Philosophy"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/BasicMetric
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/BasicMetric> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportPerformanceMetric> ;
+                                                                                       obo:IAO_0000115 "A Sport Performance Metric that represents basic, fundamental measurements in a sport or game, often directly observable and straightforward to calculate."@en ;
+                                                                                       rdfs:label "Basic Metric"@en ;
+                                                                                       skos:example "Batting average"@en ,
+                                                                                                    "Completion percentage"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/CoachAct
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/CoachAct> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf cco:IntentionalAct ;
+                                                                                    cco:definition "An Intentional Act performed by a Coach in the context of a game or sport, often related to strategizing, decision making, or instruction."@en ;
+                                                                                    cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                    rdfs:label "Coach Act"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/CoachRole
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/CoachRole> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf cco:OccupationRole ;
+                                                                                     cco:definition "A and occupational role that inheres in an Agent who is responsible for training and instructing players in a sport or game."@en ;
+                                                                                     rdfs:label "Coach Role"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/CoachingPhilosophy
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/CoachingPhilosophy> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf cco:Ideology ;
+                                                                                              cco:definition "An Ideology adopted by a Coach that shapes their approach to guiding, training, and managing players in a game or sport."@en ;
+                                                                                              cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                              rdfs:label "Coaching Philosophy"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/EsportsOrganization
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/EsportsOrganization> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportOrganization> ;
+                                                                                               cco:definition "A Sport Organization that facilitates, manages, or participates in competitive video gaming."@en ;
+                                                                                               cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                               rdfs:label "Esports Organization"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/GameEnd
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/GameEnd> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf obo:BFO_0000035 ;
+                                                                                   cco:definition "A process boundary that marks the end of a game or sports event."@en ;
+                                                                                   rdfs:label "Game End"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/GameOutcome
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/GameOutcome> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                       cco:definition "A Nominal Measurement Information Content Entity that categorizes the outcome of a game. For instance, 'win', 'loss', 'draw', 'forfeit', etc."@en ;
+                                                                                       rdfs:label "Game Outcome"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/GameStart
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/GameStart> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf obo:BFO_0000035 ;
+                                                                                     cco:definition "A process boundary that marks the beginning of a game or sports event."@en ;
+                                                                                     rdfs:label "Game Start"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/GameStrategyIdeology
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/GameStrategyIdeology> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf cco:Ideology ;
+                                                                                                cco:definition "An Ideology adopted by an Agent or Group of Agents which forms the basis of their beliefs, goals, expectations, and motivations in strategizing for a game or sport."@en ;
+                                                                                                cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                                rdfs:label "Game Strategy Ideology"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/GameType
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/GameType> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                    cco:definition "A Nominal Measurement Information Content Entity that classifies games according to their structure and rules. For example, 'single-player', 'multiplayer', 'co-op', 'competitive', etc."@en ;
+                                                                                    rdfs:label "Game Type"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/GeneralManagerRole
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/GeneralManagerRole> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportsManagementRole> ;
+                                                                                              cco:alternative_label "Football Director"@en ;
+                                                                                              cco:definition "A sports management role that inheres in an Agent who is responsible for the overall operations and performance of a sports team."@en ;
+                                                                                              cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                              rdfs:label "General Manager Role"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/HalfTime
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/HalfTime> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf obo:BFO_0000035 ;
+                                                                                    cco:definition "A process boundary that marks the transition period between the two halves of a game."@en ;
+                                                                                    rdfs:label "Half Time"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/HeadCoachRole
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/HeadCoachRole> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/CoachRole> ;
+                                                                                         cco:definition "A coach role that inheres in an Agent who is the principal coach and bears the main responsibility for strategy and team performance in a sport or game."@en ;
+                                                                                         rdfs:label "Head Coach Role"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/InningEnd
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/InningEnd> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf obo:BFO_0000035 ;
+                                                                                     cco:definition "A process boundary that marks the end of an inning in baseball."@en ;
+                                                                                     rdfs:label "Inning End"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/InningStart
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/InningStart> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf obo:BFO_0000035 ;
+                                                                                       cco:definition "A process boundary that marks the start of an inning in baseball."@en ;
+                                                                                       rdfs:label "Inning Start"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/LeagueStanding
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/LeagueStanding> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf cco:SequencePositionOrdinality ;
+                                                                                          obo:IAO_0000115 "A Sequence Position Ordinality that represents the position of a sports team within the ordered sequence of a league table"@en ;
+                                                                                          cco:alternative_label "League Table" ;
+                                                                                          rdfs:label "League Standing" .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/MatchPoint
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/MatchPoint> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf obo:BFO_0000035 ;
+                                                                                      cco:definition "A process boundary that, in sports like tennis, marks the point at which, if the serving player wins, the match is over."@en ;
+                                                                                      rdfs:label "Match Point"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/Per-ActMetric
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/Per-ActMetric> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/BasicMetric> ;
+                                                                                         obo:IAO_0000115 "A Basic Sport Performance Metric that captures performance statistics as percentages."@en ;
+                                                                                         rdfs:label "Per-Act Measurement"@en ;
+                                                                                         skos:example "Field goal percentage"@en ,
+                                                                                                      "batting average"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/Per-IntervalMetric
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/Per-IntervalMetric> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/BasicMetric> ;
+                                                                                              obo:IAO_0000115 "A Basic Sport Performance Metric that captures performance statistics standardized over a defined interval or period within the game."@en ;
+                                                                                              rdfs:label "Per-Interval Metric"@en ;
+                                                                                              skos:example "Points per game"@en ,
+                                                                                                           "Progressive Passes per 90 minutes"@en ,
+                                                                                                           "Strikeouts per 9 innings"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayType
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayType> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                    cco:definition "A Nominal Measurement Information Content Entity that categorizes a type of play or action in a game, such as 'offense', 'defense', 'special teams' in American football, or 'service', 'forehand', 'backhand' in tennis."@en ;
+                                                                                    rdfs:label "Play Type"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayerAct
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayerAct> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf cco:IntentionalAct ;
+                                                                                     cco:definition "An Intentional Act performed by a Player in the context of a game or sport."@en ;
+                                                                                     cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                     rdfs:label "Player Act"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayerAssociation
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayerAssociation> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportOrganization> ;
+                                                                                             cco:definition "A Sport Organization that represents the interests of athletes, typically in a collective bargaining context."@en ;
+                                                                                             cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                             rdfs:label "Player Association"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayerDesignation
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayerDesignation> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                             cco:definition "A Nominal Measurement Information Content Entity that classifies players according to their specific roles within a game. Examples could be 'captain', 'substitute', 'starter', or 'reserve'."@en ;
+                                                                                             rdfs:label "Player Designation"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayerPosition
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayerPosition> rdf:type owl:Class ;
+                                                                                          rdfs:subClassOf obo:BFO_0000023 ,
+                                                                                                          cco:NominalMeasurementInformationContentEntity ;
+                                                                                          obo:IAO_0000115 "A Nominal Measurement Information Content Entity that classifies players according to their roles or responsibilities within the structure of a game or sport."@en ;
+                                                                                          cco:definition "A Role that specifies a particular position or function that a player holds within a team during a game or sport event."@en ;
+                                                                                          cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                          rdfs:label "Player Position"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayerRole
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayerRole> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf cco:OccupationRole ;
+                                                                                      cco:definition "An occupational role that inheres in an Agent who participates in a sport or game in a competitive context."@en ;
+                                                                                      rdfs:label "Player Role"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayerStatus
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/PlayerStatus> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                        cco:definition "A Nominal Measurement Information Content Entity that labels the current status of a player. Examples might be 'active', 'injured', 'suspended', 'retired', etc."@en ;
+                                                                                        rdfs:label "Player Status"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/PointsBasedLeagueStanding
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/PointsBasedLeagueStanding> rdf:type owl:Class ;
+                                                                                                     rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/LeagueStanding> ;
+                                                                                                     rdfs:label "A LeagueStanding that is determined by the number of points accumulated by a sports team within a league competition"@en ,
+                                                                                                                "Points Based League Standing"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/RefereeAct
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/RefereeAct> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf cco:IntentionalAct ;
+                                                                                      cco:definition "An Intentional Act performed by a Referee in the context of a game or sport, typically related to enforcing rules and maintaining order."@en ;
+                                                                                      cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                      rdfs:label "Referee Act"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/RefereeRole
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/RefereeRole> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf cco:OccupationRole ;
+                                                                                       cco:definition "A occupational role that inheres in an Agent who is entrusted with enforcing the rules and maintaining the integrity of a sport or game during a competition."@en ;
+                                                                                       rdfs:label "Referee Role"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/RoundEnd
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/RoundEnd> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf obo:BFO_0000035 ;
+                                                                                    cco:definition "A process boundary that marks the end of a round in a game with multiple rounds."@en ;
+                                                                                    rdfs:label "Round End"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/RoundStart
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/RoundStart> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf obo:BFO_0000035 ;
+                                                                                      cco:definition "A process boundary that marks the start of a round in a game with multiple rounds."@en ;
+                                                                                      rdfs:label "Round Start"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/ScoutRole
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/ScoutRole> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportsManagementRole> ;
+                                                                                     cco:definition "A sports management role that inheres in an Agent who is responsible for the discovery and evaluation of player talent for a sports team."@en ;
+                                                                                     cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                     rdfs:label "Scout Role"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/SeasonType
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/SeasonType> rdf:type owl:Class ;
+                                                                                      rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                      cco:definition "A Nominal Measurement Information Content Entity that classifies the periods of a sports league. For example, 'regular season', 'pre-season', 'playoffs', 'off-season', etc."@en ;
+                                                                                      rdfs:label "Season Type"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/SpectatorAct
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/SpectatorAct> rdf:type owl:Class ;
+                                                                                        rdfs:subClassOf cco:IntentionalAct ;
+                                                                                        cco:definition "An Intentional Act performed by a Spectator in the context of a game or sport, typically related to observation, cheer, or interaction."@en ;
+                                                                                        cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                        rdfs:label "Spectator Act"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportActCountMetric
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportActCountMetric> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf cco:CountMeasurementInformationContentEntity ;
+                                                                                               obo:IAO_0000115 "A Count Measurement Information Content Entity that enumerates the occurrences of a specific action or event in a sport or game."@en ;
+                                                                                               cco:alternative_label "Counting Stat"@en ;
+                                                                                               cco:example_of_usage "\"Pass Attempts\", \"Steals\","@en ;
+                                                                                               rdfs:label "Sport Act Count Metric"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportCategory
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportCategory> rdf:type owl:Class ;
+                                                                                         rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                                                                                         cco:definition "A Nominal Measurement Information Content Entity that classifies sports into categories. Examples include 'team sport', 'individual sport', 'racket sport', 'contact sport', etc."@en ;
+                                                                                         rdfs:label "Sport Category"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportEthics
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportEthics> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf cco:Ideology ;
+                                                                                       cco:definition "An Ideology that governs the beliefs and actions of Agents involved in sports, in relation to matters of right and wrong conduct."@en ;
+                                                                                       cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                       rdfs:label "Sport Ethics"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportEventProbabilityMetric
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportEventProbabilityMetric> rdf:type owl:Class ;
+                                                                                                       rdfs:subClassOf cco:ProbabilityMeasurementInformationContentEntity ;
+                                                                                                       obo:IAO_0000115 "A Probability Measurement Information Content Entity that quantifies the likelihood of a specific event or outcome occurring in a sport or game context."@en ;
+                                                                                                       cco:example_of_usage "\"expected goals\", \"win probablility\""@en ;
+                                                                                                       rdfs:label "Sport Act Probability Metric"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportGoverningBody
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportGoverningBody> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportOrganization> ;
+                                                                                              cco:definition "A Sport Organization that possesses regulatory or supervisory authority over a particular sport or sports in a specific geographic area or globally."@en ;
+                                                                                              cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                              rdfs:label "Sport Governing Body"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportLeague
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportLeague> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportOrganization> ;
+                                                                                       cco:definition "A Sport Organization that governs competitions between teams and/or individual athletes within a particular sport."@en ;
+                                                                                       cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                       rdfs:label "Sport League"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportOrganization
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportOrganization> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf cco:Organization ;
+                                                                                             cco:definition "An Organization that operates within the domain of sports, facilitating, managing, or participating in sporting events."@en ;
+                                                                                             cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                             rdfs:label "Sport Organization"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportPerformanceMetric
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportPerformanceMetric> rdf:type owl:Class ;
+                                                                                                  rdfs:subClassOf cco:ProportionalRatioMeasurementInformationContentEntity ;
+                                                                                                  obo:IAO_0000115 "A Proportional Ratio Measurement Information Content Entity that quantifies an aspect of performance in a sport or game. This performance can be that of an individual player, a team, or even equipment."@en ;
+                                                                                                  cco:example_of_usage "On Base Percentage\", \"Completion Percentage\", \"Efficiency\""@en ;
+                                                                                                  rdfs:label "Sport Performance Metric" .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportTeam
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportTeam> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportOrganization> ;
+                                                                                     cco:definition "A Sport Organization comprised of players, coaches, and support staff that participates in sports competitions."@en ;
+                                                                                     cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                     rdfs:label "Sport Team"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportsManagementRole
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/SportsManagementRole> rdf:type owl:Class ;
+                                                                                                rdfs:subClassOf cco:OccupationRole ;
+                                                                                                cco:definition "An occupational role that inheres in an Agent who is responsible for overseeing, managing, and strategizing various aspects of a sports team or organization."@en ;
+                                                                                                cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                                rdfs:label "Sports Management Role"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/TeamPlayPhilosophy
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/TeamPlayPhilosophy> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf cco:Ideology ;
+                                                                                              cco:definition "An Ideology adopted by a Team or Group of Agents regarding how they should approach and conduct their participation in a game or sport."@en ;
+                                                                                              cco:is_curated_in_ontology "http://www.gameandsportsontologyfoundry.org/gameandsportscore"^^xsd:anyURI ;
+                                                                                              rdfs:label "Team Play Philosophy"@en .
+
+
+###  http://www.gameandsportsontologyfoundry.org/gameandsportscore/WinsBasedLeagueStanding
+<http://www.gameandsportsontologyfoundry.org/gameandsportscore/WinsBasedLeagueStanding> rdf:type owl:Class ;
+                                                                                                   rdfs:subClassOf <http://www.gameandsportsontologyfoundry.org/gameandsportscore/LeagueStanding> ;
+                                                                                                   rdfs:label "A LeagueStanding that is determined by the number of matches won by a sports team within a league competition."@en ,
+                                                                                                              "Wins Based League Standing"@en .
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
